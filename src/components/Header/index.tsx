@@ -4,11 +4,11 @@ import NavBarDesktop from "../NavBar/NavBarDesktop";
 const Component = () => {
   // const isMobile = useScreenSize();
   return (
-    <div className="bg-black bg-opacity-20">
+    <div className="bg-BlueCharcoal ">
       {/* <div>
         <NavBarMobile />
       </div> */}
-      <div className="mx-8 my-5 flex justify-between">
+      <div className="mx-8 flex justify-between">
         <p>LOGO</p>
         <NavBarDesktop />
       </div>

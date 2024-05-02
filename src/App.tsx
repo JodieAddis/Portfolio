@@ -1,16 +1,14 @@
 import Header from "./components/Header";
-import Presentation from "./components/Presentation";
+import PortfolioContainer from "./components/PortfolioContainer";
 
 function App() {
   return (
     <>
-      <header>
+      <header className="fixed top-0">
         <Header />
       </header>
       <main>
-        <section className="mt-20">
-          <Presentation />
-        </section>
+        <PortfolioContainer />
       </main>
       <footer className="text-center">Copyright 2024</footer>
     </>
