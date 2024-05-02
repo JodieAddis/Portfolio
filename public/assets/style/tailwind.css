@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  body {
+    @apply bg-BlueCharcoal text-white;
+  }
+  .navbar_desktop {
+    @apply list-none font-bold uppercase;
+  }
+  .navbar_mobile {
+    @apply list-none font-bold uppercase;
+  }
+}
