@@ -1,6 +1,8 @@
 import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
-import Presentation from "../Presentation";
+import PresentationDesktop from "../Presentation/PresentationDesktop";
+import PresentationMobile from "../Presentation/PresentationMobile";
+import ProjectCards from "../ProjectCards";
 import Skills from "../Skills";
 
 const Component = () => {
@@ -17,8 +19,9 @@ const Component = () => {
           content={"Within the space, a new React developer is born:"}
           css={"section_paragraph"}
         />
-        <div className="border-Downriver mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
-          <Presentation />
+        <div className="border-Downriver section_design">
+          {/* <PresentationDesktop /> */}
+          <PresentationMobile />
         </div>
       </section>
       <section className="mt-28">
@@ -34,7 +37,7 @@ const Component = () => {
           }
           css={"section_paragraph"}
         />
-        <div className="border-Bossanova mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
+        <div className="border-Bossanova section_design">
           <Skills />
         </div>
       </section>
@@ -49,8 +52,12 @@ const Component = () => {
           content={"Exploring my web universe:"}
           css={"section_paragraph"}
         />
-        <div className=" border-VinRouge mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
-          TEST
+        <div className=" border-VinRouge section_design">
+          <ProjectCards
+            name={"online dictionnary"}
+            description={"description en une ligne du présent projet"}
+            url={"https://jodieaddis.github.io/online-dictionary/"}
+          />
         </div>
       </section>
       <section className="mt-28">
@@ -60,9 +67,7 @@ const Component = () => {
           css={"section_heading"}
           id={"contact"}
         />
-        <div className="border-Charm mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
-          TEST
-        </div>
+        <div className="border-Charm section_design">TEST</div>
       </section>
     </>
   );

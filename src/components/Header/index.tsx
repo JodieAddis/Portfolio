@@ -1,17 +1,17 @@
 import NavBarDesktop from "../NavBar/NavBarDesktop";
-// import NavBarMobile from "../NavBar/NavBarMobile";
+import NavBarMobile from "../NavBar/NavBarMobile";
 
 const Component = () => {
   // const isMobile = useScreenSize();
   return (
     <div className="bg-BlueCharcoal ">
-      {/* <div>
+      <div>
         <NavBarMobile />
-      </div> */}
-      <div className="mx-8 flex justify-between">
+      </div>
+      {/* <div className="mx-8 flex justify-between">
         <p>LOGO</p>
         <NavBarDesktop />
-      </div>
+      </div> */}
       <div className="h-[1px] w-screen bg-white"></div>
     </div>
   );

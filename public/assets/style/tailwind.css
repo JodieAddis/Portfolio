@@ -23,13 +23,16 @@
     @apply list-none px-3 py-5 font-Montserrat text-sm uppercase;
   }
   .navbar_mobile {
-    @apply list-none font-bold uppercase;
+    @apply my-6 ml-6 list-none font-Montserrat font-bold uppercase tracking-widest;
   }
   .section_heading {
-    @apply ml-28 font-Montserrat text-3xl uppercase;
+    @apply mx-8 font-Montserrat text-3xl uppercase lg:ml-28;
   }
   .section_paragraph {
-    @apply ml-28 mt-3 font-Kumbh text-lg capitalize tracking-widest;
+    @apply mx-8 mt-3 font-Kumbh text-lg capitalize tracking-widest lg:ml-28;
+  }
+  .section_design {
+    @apply mx-8 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30 lg:mx-28;
   }
   .stack_heading {
     @apply mt-3 font-Kumbh text-base uppercase tracking-widest;

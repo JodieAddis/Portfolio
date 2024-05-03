@@ -1,9 +1,9 @@
-import Paragraph from "../../typographies/Paragraph";
+import Paragraph from "../../../typographies/Paragraph";
 
 const Component = () => {
   return (
     <div className="m-16 ">
-      <div className="flex flex-col items-center justify-center lg:flex-row">
+      <div className="flex flex-row items-center justify-center">
         <div>
           <div className="border-Downriver mr-16 h-64 w-64 rounded-full border-[3px] border-solid"></div>
         </div>
@@ -11,7 +11,7 @@ const Component = () => {
           content={
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           }
-          css={"text-3xl ml-16 leading-relaxed text-justify font-Kumbh"}
+          css={"text-3xl lg:ml-16 leading-relaxed text-justify font-Kumbh"}
         />
       </div>
       <div className="mt-16 flex flex-col items-center justify-center lg:flex-row">

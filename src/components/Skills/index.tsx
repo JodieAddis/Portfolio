@@ -6,7 +6,7 @@ import StackCards from "../StackCards";
 
 const Component = () => {
   return (
-    <div className="flex flex-row justify-around">
+    <div className="flex flex-row flex-wrap justify-center lg:justify-around">
       <StackCards iconLogo={<IconReact />} stackName={"react"} />
       <StackCards iconLogo={<IconTailwind />} stackName={"tailwind"} />
       <StackCards iconLogo={<IconTypescript />} stackName={"typescript"} />
