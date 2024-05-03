@@ -5,10 +5,14 @@ export default {
     extend: {
       colors: {
         BlueCharcoal: "#02111B",
-        CaribbeanGreen: "#70D2CC",
-        Purple: "#A102BB",
-        Pink: "#D40775",
-        Pistachio: "#A1BB02",
+        // CaribbeanGreen: "#70D2CC",
+        // Purple: "#A102BB",
+        // Pink: "#D40775",
+        // Pistachio: "#A1BB02",
+        Charm: "#d35d8d",
+        VinRouge: "#943b73",
+        Bossanova: "#473162",
+        Downriver: "#0b2152",
       },
       fontFamily: {
         Montserrat: "Montserrat",

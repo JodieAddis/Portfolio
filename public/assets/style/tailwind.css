@@ -20,42 +20,21 @@
     @apply bg-BlueCharcoal bg-[url('../images/background-stars.svg')] bg-cover text-white;
   }
   .navbar_desktop {
-    @apply font-Montserrat list-none px-3 py-5 text-sm uppercase;
+    @apply list-none px-3 py-5 font-Montserrat text-sm uppercase;
   }
   .navbar_mobile {
     @apply list-none font-bold uppercase;
   }
-  .heading {
-    @apply font-Montserrat ml-28 text-4xl uppercase;
+  .section_heading {
+    @apply ml-28 font-Montserrat text-3xl uppercase;
   }
-  .border_style {
-    @apply relative inline-block;
+  .section_paragraph {
+    @apply ml-28 mt-3 font-Kumbh text-lg capitalize tracking-widest;
   }
-  .border_style span {
-    @apply absolute block transform duration-200 ease-in-out;
+  .stack_heading {
+    @apply mt-3 font-Kumbh text-base uppercase tracking-widest;
   }
-  .border_style span:nth-child(1) {
-    @apply left-0 top-0 h-[3px] w-full origin-right scale-x-0 delay-100;
-  }
-  .border_style:hover span:nth-child(1) {
-    @apply origin-left scale-x-100;
-  }
-  .border_style span:nth-child(3) {
-    @apply bottom-0 left-0 h-[3px] w-full origin-left scale-x-0 delay-300;
-  }
-  .border_style:hover span:nth-child(3) {
-    @apply origin-right scale-x-100;
-  }
-  .border_style span:nth-child(2) {
-    @apply right-0 top-0 h-full w-[3px] origin-bottom scale-y-0 delay-200;
-  }
-  .border_style:hover span:nth-child(2) {
-    @apply origin-top scale-y-100;
-  }
-  .border_style span:nth-child(4) {
-    @apply bottom-0 left-0 h-full w-[3px] origin-top scale-y-0 delay-[400ms];
-  }
-  .border_style:hover span:nth-child(4) {
-    @apply origin-bottom scale-y-100;
+  .icon_design {
+    @apply bg-Bossanova flex h-16 w-16 items-center rounded-lg p-1;
   }
 }

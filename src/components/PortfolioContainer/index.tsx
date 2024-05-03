@@ -1,4 +1,5 @@
 import Heading from "../../typographies/Heading";
+import Paragraph from "../../typographies/Paragraph";
 import Presentation from "../Presentation";
 import Skills from "../Skills";
 
@@ -8,11 +9,15 @@ const Component = () => {
       <section className="mt-40">
         <Heading
           kind={"h2"}
-          content={"who am i?"}
-          css={"heading"}
+          content={"about"}
+          css={"section_heading"}
           id={"presentation"}
         />
-        <div className="border-Pistachio mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
+        <Paragraph
+          content={"Within the space, a new React developer is born:"}
+          css={"section_paragraph"}
+        />
+        <div className="border-Downriver mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
           <Presentation />
         </div>
       </section>
@@ -20,21 +25,31 @@ const Component = () => {
         <Heading
           kind={"h2"}
           content={"my stellar abilities"}
-          css={"heading"}
+          css={"section_heading"}
           id={"abilities"}
         />
-        <div className="border-CaribbeanGreen mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
+        <Paragraph
+          content={
+            "Discover the skills, tools, and technologies I utilize to launch your projects into orbit:"
+          }
+          css={"section_paragraph"}
+        />
+        <div className="border-Bossanova mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
           <Skills />
         </div>
       </section>
       <section className="mt-28">
         <Heading
           kind={"h2"}
-          content={"beyond the stars: my projects"}
-          css={"heading"}
+          content={"my projects"}
+          css={"section_heading"}
           id={"projets"}
         />
-        <div className=" border-Purple mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
+        <Paragraph
+          content={"Exploring my web universe:"}
+          css={"section_paragraph"}
+        />
+        <div className=" border-VinRouge mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
           TEST
         </div>
       </section>
@@ -42,10 +57,10 @@ const Component = () => {
         <Heading
           kind={"h2"}
           content={"cosmic contact hub"}
-          css={"heading"}
+          css={"section_heading"}
           id={"contact"}
         />
-        <div className="border-Pink mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
+        <div className="border-Charm mx-28 mt-4 rounded-xl border-[1px] border-solid bg-black bg-opacity-30">
           TEST
         </div>
       </section>

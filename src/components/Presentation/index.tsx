@@ -5,7 +5,7 @@ const Component = () => {
     <div className="m-16 ">
       <div className="flex flex-col items-center justify-center lg:flex-row">
         <div>
-          <div className="mr-16 h-64 w-64 rounded-full border-[1px] border-solid border-white"></div>
+          <div className="border-Downriver mr-16 h-64 w-64 rounded-full border-[3px] border-solid"></div>
         </div>
         <Paragraph
           content={
@@ -24,7 +24,7 @@ const Component = () => {
           }
         />
         <div>
-          <div className="ml-16 h-64 w-64 rounded-full border-[1px] border-solid border-white"></div>
+          <div className="border-Downriver ml-16 h-64 w-64 rounded-full border-[3px] border-solid"></div>
         </div>
       </div>
     </div>
