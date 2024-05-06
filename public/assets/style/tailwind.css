@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: Kumbh;
+  src: url("../font/KumbhSans-Regular.ttf");
+}
+
+@layer components {
+  html {
+    @apply h-screen;
+  }
+  body {
+    @apply bg-BlueCharcoal bg-[url('../images/background-stars.svg')] bg-cover text-white;
+  }
+  .navbar_desktop {
+    @apply list-none px-3 py-5 font-Montserrat text-sm uppercase;
+  }
+  .navbar_mobile {
+    @apply my-6 ml-6 list-none font-Montserrat font-bold uppercase tracking-widest;
+  }
+  .navbar_mobile_circle {
+    @apply relative my-auto h-6 w-6 items-center rounded-full;
+  }
+  .section_heading {
+    @apply mx-8 font-Montserrat text-3xl uppercase lg:ml-28;
+  }
+  .section_paragraph {
+    @apply mx-8 mt-3 font-Kumbh text-lg capitalize tracking-widest lg:ml-28;
+  }
+  .section_design {
+    @apply mx-8 mt-4 rounded-xl border-[2px] border-solid bg-black bg-opacity-30 lg:mx-28;
+  }
+  .stack_heading {
+    @apply mt-3 font-Kumbh text-base uppercase tracking-widest;
+  }
+  .icon_design {
+    @apply flex h-16 w-16 items-center rounded-lg bg-Bossanova p-1;
+  }
+}

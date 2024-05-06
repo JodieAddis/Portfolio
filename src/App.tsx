@@ -1,7 +1,16 @@
+import Header from "./components/Header";
+import PortfolioContainer from "./components/PortfolioContainer";
+
 function App() {
   return (
     <>
-      <h1>Portfolio</h1>
+      <header className="fixed top-0">
+        <Header />
+      </header>
+      <main>
+        <PortfolioContainer />
+      </main>
+      <footer className="text-center">Copyright 2024</footer>
     </>
   );
 }
