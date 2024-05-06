@@ -1,8 +1,7 @@
 import { useState } from "react";
-import IconMenu from "../../../icons/IconMenu";
 import Button from "../../Button";
-import IconClose from "../../../icons/IconClose";
 import Paragraph from "../../../typographies/Paragraph";
+import IconNavBar from "../../../icons/IconNavBar";
 
 const Component = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
@@ -12,7 +11,7 @@ const Component = () => {
         <div className="absolute h-screen w-full bg-BlueCharcoal">
           <div className="flex justify-end">
             <Button
-              content={<IconClose />}
+              content={<IconNavBar kind={"close"} />}
               onClick={() => {
                 setIsOpen(false);
               }}
@@ -66,7 +65,7 @@ const Component = () => {
         <div className="flex justify-between p-4">
           <p>LOGO</p>
           <Button
-            content={<IconMenu />}
+            content={<IconNavBar kind={"open"} />}
             onClick={() => {
               setIsOpen(true);
             }}
