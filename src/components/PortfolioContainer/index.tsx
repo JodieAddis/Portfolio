@@ -1,11 +1,15 @@
+import useScreenSize from "../../hook/useScreenSize";
 import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
+import Form from "../Form";
 import PresentationDesktop from "../Presentation/PresentationDesktop";
 import PresentationMobile from "../Presentation/PresentationMobile";
 import ProjectCards from "../ProjectCards";
 import Skills from "../Skills";
 
 const Component = () => {
+  const isMobile = useScreenSize();
+
   return (
     <>
       <section className="mt-40">
@@ -20,8 +24,7 @@ const Component = () => {
           css={"section_paragraph"}
         />
         <div className="section_design border-Downriver">
-          {/* <PresentationDesktop /> */}
-          <PresentationMobile />
+          {isMobile ? <PresentationMobile /> : <PresentationDesktop />}
         </div>
       </section>
       <section className="mt-28">
@@ -52,22 +55,32 @@ const Component = () => {
           content={"Exploring my web universe:"}
           css={"section_paragraph"}
         />
-        <div className=" section_design border-VinRouge">
+        <div className=" section_design lg:flew-wrap flex flex-col border-VinRouge lg:flex-row">
+          <ProjectCards name={"e-commerce sneakers"} url={"#"} />
           <ProjectCards
-            name={"online dictionnary"}
-            description={"description en une ligne du présent projet"}
+            name={"online dictionary"}
             url={"https://jodieaddis.github.io/online-dictionary/"}
+          />
+          <ProjectCards
+            name={"crowdfunding product page"}
+            url={"https://jodieaddis.github.io/crowdfunding_product_page/"}
+          />
+          <ProjectCards
+            name={"password generator"}
+            url={"https://jodieaddis.github.io/Password-generator/"}
           />
         </div>
       </section>
-      <section className="mt-28">
+      <section className="mb-10 mt-28">
         <Heading
           kind={"h2"}
           content={"cosmic contact hub"}
           css={"section_heading"}
           id={"contact"}
         />
-        <div className="section_design border-Charm">TEST</div>
+        <div className="section_design border-Charm">
+          <Form />
+        </div>
       </section>
     </>
   );

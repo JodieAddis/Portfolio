@@ -1,32 +1,24 @@
-import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
 
 interface ProjectCardsProps {
   name: string;
-  description: string;
   url: string;
 }
 
-const Component = ({ name, description, url }: ProjectCardsProps) => {
+const Component = ({ name, url }: ProjectCardsProps) => {
   return (
-    <a href={url} target="_blank">
-      <div
-        className="border-VinRouge mx-8 my-6 rounded-lg
-    border-2 border-solid bg-BlueCharcoal lg:m-10 lg:h-[300px] lg:w-[300px]"
-      >
-        <div className="w-content h-[200px] rounded-t-lg bg-white">IMAGE</div>
-        <div className="m-4">
-          <Heading
-            kind={"h3"}
-            content={name}
-            css={"uppercase font-Montserrat text-base text-center"}
-          />
+    <a className="flex justify-center" href={url} target="_blank">
+      <div className="m-8 flex h-[180px] w-[250px] flex-col items-center justify-center rounded-xl border-2 border-solid border-white">
+        <div className="mt-2.5 flex h-[140px] w-[220px] items-center justify-center rounded-xl border-2 border-solid border-white bg-VinRouge bg-opacity-20">
           <Paragraph
-            content={description}
-            css={
-              "font-Kumbh tracking-widest mt-5 text-sm capitalize text-center"
-            }
+            content={name}
+            css={"uppercase font-Montserrat font-bold text-lg text-center mx-4"}
           />
+        </div>
+        <div className="my-1 flex flex-row items-center">
+          <span className="h-4 w-4 rounded-full bg-Bossanova"></span>
+          <span className="mx-6 h-4 w-4 rounded-full bg-VinRouge"></span>
+          <span className="h-4 w-4 rounded-full bg-Downriver"></span>
         </div>
       </div>
     </a>
