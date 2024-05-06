@@ -25,6 +25,9 @@
   .navbar_mobile {
     @apply my-6 ml-6 list-none font-Montserrat font-bold uppercase tracking-widest;
   }
+  .navbar_mobile_circle {
+    @apply relative my-auto h-6 w-6 items-center rounded-full;
+  }
   .section_heading {
     @apply mx-8 font-Montserrat text-3xl uppercase lg:ml-28;
   }
@@ -38,6 +41,6 @@
     @apply mt-3 font-Kumbh text-base uppercase tracking-widest;
   }
   .icon_design {
-    @apply bg-Bossanova flex h-16 w-16 items-center rounded-lg p-1;
+    @apply flex h-16 w-16 items-center rounded-lg bg-Bossanova p-1;
   }
 }

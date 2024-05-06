@@ -19,7 +19,7 @@ const Component = () => {
           content={"Within the space, a new React developer is born:"}
           css={"section_paragraph"}
         />
-        <div className="border-Downriver section_design">
+        <div className="section_design border-Downriver">
           {/* <PresentationDesktop /> */}
           <PresentationMobile />
         </div>
@@ -37,7 +37,7 @@ const Component = () => {
           }
           css={"section_paragraph"}
         />
-        <div className="border-Bossanova section_design">
+        <div className="section_design border-Bossanova">
           <Skills />
         </div>
       </section>
@@ -52,7 +52,7 @@ const Component = () => {
           content={"Exploring my web universe:"}
           css={"section_paragraph"}
         />
-        <div className=" border-VinRouge section_design">
+        <div className=" section_design border-VinRouge">
           <ProjectCards
             name={"online dictionnary"}
             description={"description en une ligne du présent projet"}
@@ -67,7 +67,7 @@ const Component = () => {
           css={"section_heading"}
           id={"contact"}
         />
-        <div className="border-Charm section_design">TEST</div>
+        <div className="section_design border-Charm">TEST</div>
       </section>
     </>
   );

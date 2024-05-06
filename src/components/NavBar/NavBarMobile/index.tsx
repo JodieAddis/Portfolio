@@ -27,7 +27,7 @@ const Component = () => {
                 setIsOpen(false);
               }}
             >
-              <div className="bg-Downriver flex h-6 w-6 items-center rounded-full"></div>
+              <span className="navbar_mobile_circle bg-Downriver"></span>
               <Paragraph content={"presentation"} css={"navbar_mobile"} />
             </a>
             <a
@@ -37,7 +37,7 @@ const Component = () => {
                 setIsOpen(false);
               }}
             >
-              <div className="bg-Bossanova flex h-6 w-6 items-center rounded-full"></div>
+              <span className="navbar_mobile_circle bg-Bossanova"></span>
               <Paragraph content={"skills"} css={"navbar_mobile"} />
             </a>
             <a
@@ -47,7 +47,7 @@ const Component = () => {
                 setIsOpen(false);
               }}
             >
-              <div className="bg-VinRouge flex h-6 w-6 items-center rounded-full"></div>
+              <span className="navbar_mobile_circle bg-VinRouge"></span>
               <Paragraph content={"projects"} css={"navbar_mobile"} />
             </a>
             <a
@@ -57,7 +57,7 @@ const Component = () => {
                 setIsOpen(false);
               }}
             >
-              <div className="bg-Charm flex h-6 w-6 items-center rounded-full"></div>
+              <span className="navbar_mobile_circle bg-Charm"></span>
               <Paragraph content={"contact"} css={"navbar_mobile"} />
             </a>
           </nav>

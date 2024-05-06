@@ -1,11 +1,13 @@
+import useScreenSize from "../../../hook/useScreenSize";
 import Paragraph from "../../../typographies/Paragraph";
 
 const Component = () => {
+  const isMobile = useScreenSize();
   return (
     <div className="m-6 ">
       <div className="mt-8 flex flex-col items-center justify-center">
         <div>
-          <div className="border-Downriver h-64 w-64 rounded-full border-[3px] border-solid"></div>
+          <div className="h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
         </div>
         <Paragraph
           content={
@@ -16,7 +18,7 @@ const Component = () => {
       </div>
       <div className="mt-8 flex flex-col items-center justify-center lg:flex-row">
         <div>
-          <div className="border-Downriver h-64 w-64 rounded-full border-[3px] border-solid"></div>
+          <div className="h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
         </div>
       </div>
       <Paragraph
