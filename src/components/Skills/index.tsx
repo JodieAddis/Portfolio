@@ -11,7 +11,7 @@ const Component = () => {
 
   const isMobile = useScreenSize();
   return (
-    <div className="flex flex-col items-center lg:flex-row lg:justify-around">
+    <div className="flex flex-col items-center lg:flex-row lg:flex-wrap lg:justify-center">
       {isMobile ? (
         <>
           {visibleSkills.map((skill, index) => (

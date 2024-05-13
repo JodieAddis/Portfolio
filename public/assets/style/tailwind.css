@@ -43,4 +43,7 @@
   .icon_design {
     @apply flex h-16 w-16 items-center rounded-lg bg-Bossanova p-1;
   }
+  .project_stack {
+    @apply mx-3 flex h-10 w-10 items-center rounded-full border-2 border-solid border-VinRouge bg-BlueCharcoal p-1;
+  }
 }
