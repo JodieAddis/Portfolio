@@ -13,6 +13,8 @@ import {
   passwordGenerator,
 } from "../../data/projectStack";
 import Skills from "../Skills";
+import IconSkills from "../../icons/IconSkills";
+import IconNetwork from "../../icons/IconNetwork";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -178,8 +180,32 @@ const Component = () => {
           css={"section_heading"}
           id={"contact"}
         />
-        <div className="section_design border-Charm">
-          <Form />
+        <div className="section_design flex flex-col border-Charm lg:flex-row">
+          <div className="flex flex-col items-center justify-center">
+            <Paragraph
+              content="Si vous désirez en savoir plus sur mon parcours et mes projets, direction les réseaux sociaux"
+              css="mb-6 text-white text-opacity-80 text-center mt-8 text-base font-Kumbh tracking-widest mx-5"
+            />
+            <div className="mb-8 flex flex-row ">
+              <a
+                href="https://github.com/JodieAddis"
+                target="blank_"
+                className="mr-4"
+              >
+                <IconNetwork name="github" />
+              </a>
+              <a href="https://www.linkedin.com/in/jodieaddis/" target="blank_">
+                <IconNetwork name="linkedin" />
+              </a>
+            </div>
+            <div>
+              <Paragraph
+                content="Vous pouvez également me contacter en complétant le formulaire ci-dessous"
+                css="text-center mx-5 text-white text-opacity-80 text-base font-Kumbh tracking-widest"
+              />
+              <Form />
+            </div>
+          </div>
         </div>
       </section>
     </>

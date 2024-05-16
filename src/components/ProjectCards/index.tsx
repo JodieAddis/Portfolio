@@ -11,7 +11,7 @@ const Component = ({ name, stack, hosting }: ProjectCardsProps) => {
   return (
     <div className="flex justify-center">
       <div className="m-8 flex  w-[280px] flex-col items-center rounded-xl border-2 border-solid border-white bg-black bg-opacity-30">
-        <div className="mt-2.5 flex h-[140px] w-[250px] items-center justify-center rounded-xl border-2 border-solid border-white bg-VinRouge bg-opacity-20 lg:flex-col">
+        <div className="mt-2.5 flex h-[140px] w-[220px] items-center justify-center rounded-xl border-2 border-solid border-white bg-VinRouge bg-opacity-20 lg:w-[250px] lg:flex-col">
           <Paragraph
             content={name}
             css={"uppercase font-Montserrat font-bold text-lg text-center mx-4"}
