@@ -7,11 +7,14 @@ import PresentationMobile from "../Presentation/PresentationMobile";
 import ProjectCards from "../ProjectCards";
 import {
   eCommerceSnearkers,
+  planetFactSite,
   onlineDictionary,
   crowFunding,
   passwordGenerator,
 } from "../../data/projectStack";
 import Skills from "../Skills";
+import IconSkills from "../../icons/IconSkills";
+import IconNetwork from "../../icons/IconNetwork";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -38,7 +41,7 @@ const Component = () => {
           kind={"h2"}
           content={"my stellar abilities"}
           css={"section_heading"}
-          id={"abilities"}
+          id={"skills"}
         />
         <Paragraph
           content={
@@ -55,7 +58,7 @@ const Component = () => {
           kind={"h2"}
           content={"my projects"}
           css={"section_heading"}
-          id={"projets"}
+          id={"projects"}
         />
         <Paragraph
           content={"Exploring my web universe:"}
@@ -63,64 +66,110 @@ const Component = () => {
         />
         <div className=" section_design flex flex-col border-VinRouge lg:flex-row lg:flex-wrap lg:justify-between">
           <ProjectCards
-            name={
-              <>
-                e-commerce sneakers
-                <div className=" mt-4 flex flex-row">
-                  {eCommerceSnearkers.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"#"}
+            name={"planet fact site"}
+            stack={planetFactSite.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={planetFactSite.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
+          />
+
+          <ProjectCards
+            name={"e-commerce"}
+            stack={eCommerceSnearkers.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={eCommerceSnearkers.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
           <ProjectCards
-            name={
-              <>
-                online dictionary
-                <div className=" mt-4 flex flex-row">
-                  {onlineDictionary.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"https://jodieaddis.github.io/online-dictionary/"}
+            name={"online dictionary"}
+            stack={onlineDictionary.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={onlineDictionary.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
           <ProjectCards
-            name={
-              <>
-                crowdfunding product page
-                <div className=" mt-4 flex flex-row">
-                  {crowFunding.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"https://jodieaddis.github.io/crowdfunding_product_page/"}
+            name={"crowdfunding product page"}
+            stack={crowFunding.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={crowFunding.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
           <ProjectCards
-            name={
-              <>
-                password generator
-                <div className=" mt-4 flex flex-row justify-center">
-                  {passwordGenerator.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"https://jodieaddis.github.io/Password-generator/"}
+            name={"password generator"}
+            stack={passwordGenerator.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={passwordGenerator.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
         </div>
       </section>
@@ -131,8 +180,32 @@ const Component = () => {
           css={"section_heading"}
           id={"contact"}
         />
-        <div className="section_design border-Charm">
-          <Form />
+        <div className="section_design flex flex-col border-Charm lg:flex-row">
+          <div className="flex flex-col items-center justify-center">
+            <Paragraph
+              content="Si vous désirez en savoir plus sur mon parcours et mes projets, direction les réseaux sociaux"
+              css="mb-6 text-white text-opacity-80 text-center mt-8 text-base font-Kumbh tracking-widest mx-5"
+            />
+            <div className="mb-8 flex flex-row ">
+              <a
+                href="https://github.com/JodieAddis"
+                target="blank_"
+                className="mr-4"
+              >
+                <IconNetwork name="github" />
+              </a>
+              <a href="https://www.linkedin.com/in/jodieaddis/" target="blank_">
+                <IconNetwork name="linkedin" />
+              </a>
+            </div>
+            <div>
+              <Paragraph
+                content="Vous pouvez également me contacter en complétant le formulaire ci-dessous"
+                css="text-center mx-5 text-white text-opacity-80 text-base font-Kumbh tracking-widest"
+              />
+              <Form />
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -44,6 +44,21 @@
     @apply flex h-16 w-16 items-center rounded-lg bg-Bossanova p-1;
   }
   .project_stack {
-    @apply mx-3 flex h-10 w-10 items-center rounded-full border-2 border-solid border-VinRouge bg-BlueCharcoal p-1;
+    @apply mx-1 flex h-10 w-10 flex-row items-center justify-center rounded-full border-2 border-solid border-VinRouge bg-BlueCharcoal p-1;
+  }
+  .project_host {
+    @apply mx-3 flex h-8 w-8 items-center;
+  }
+  .presentation {
+    @apply bg-Downriver;
+  }
+  .skills {
+    @apply bg-Bossanova;
+  }
+  .projects {
+    @apply bg-VinRouge;
+  }
+  .contact {
+    @apply bg-Charm;
   }
 }
