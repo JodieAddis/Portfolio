@@ -7,6 +7,7 @@ import PresentationMobile from "../Presentation/PresentationMobile";
 import ProjectCards from "../ProjectCards";
 import {
   eCommerceSnearkers,
+  planetFactSite,
   onlineDictionary,
   crowFunding,
   passwordGenerator,
@@ -63,64 +64,110 @@ const Component = () => {
         />
         <div className=" section_design flex flex-col border-VinRouge lg:flex-row lg:flex-wrap lg:justify-between">
           <ProjectCards
-            name={
-              <>
-                e-commerce sneakers
-                <div className=" mt-4 flex flex-row">
-                  {eCommerceSnearkers.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"#"}
+            name={"planet fact site"}
+            stack={planetFactSite.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={planetFactSite.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
+          />
+
+          <ProjectCards
+            name={"e-commerce"}
+            stack={eCommerceSnearkers.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={eCommerceSnearkers.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
           <ProjectCards
-            name={
-              <>
-                online dictionary
-                <div className=" mt-4 flex flex-row">
-                  {onlineDictionary.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"https://jodieaddis.github.io/online-dictionary/"}
+            name={"online dictionary"}
+            stack={onlineDictionary.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={onlineDictionary.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
           <ProjectCards
-            name={
-              <>
-                crowdfunding product page
-                <div className=" mt-4 flex flex-row">
-                  {crowFunding.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"https://jodieaddis.github.io/crowdfunding_product_page/"}
+            name={"crowdfunding product page"}
+            stack={crowFunding.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={crowFunding.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
           <ProjectCards
-            name={
-              <>
-                password generator
-                <div className=" mt-4 flex flex-row justify-center">
-                  {passwordGenerator.map((item, index) => (
-                    <div key={index} className="project_stack">
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-            url={"https://jodieaddis.github.io/Password-generator/"}
+            name={"password generator"}
+            stack={passwordGenerator.map((item, index) => (
+              <div>
+                {item.type === "icon" && (
+                  <div className="project_stack" key={index}>
+                    {item.icon}
+                  </div>
+                )}
+              </div>
+            ))}
+            hosting={passwordGenerator.map((item, index) => (
+              <div className="flex flex-row" key={index}>
+                {item.type === "urlHost" && (
+                  <a href={item.url} className="project_stack" target="blank_">
+                    {item.host}
+                  </a>
+                )}
+              </div>
+            ))}
           />
         </div>
       </section>
