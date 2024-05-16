@@ -49,4 +49,16 @@
   .project_host {
     @apply mx-3 flex h-8 w-8 items-center;
   }
+  .presentation {
+    @apply bg-Downriver;
+  }
+  .skills {
+    @apply bg-Bossanova;
+  }
+  .projects {
+    @apply bg-VinRouge;
+  }
+  .contact {
+    @apply bg-Charm;
+  }
 }

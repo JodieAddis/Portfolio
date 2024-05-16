@@ -39,7 +39,7 @@ const Component = () => {
           kind={"h2"}
           content={"my stellar abilities"}
           css={"section_heading"}
-          id={"abilities"}
+          id={"skills"}
         />
         <Paragraph
           content={
@@ -56,7 +56,7 @@ const Component = () => {
           kind={"h2"}
           content={"my projects"}
           css={"section_heading"}
-          id={"projets"}
+          id={"projects"}
         />
         <Paragraph
           content={"Exploring my web universe:"}

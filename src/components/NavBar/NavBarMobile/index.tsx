@@ -5,6 +5,7 @@ import IconNavBar from "../../../icons/IconNavBar";
 
 const Component = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const tabs = ["presentation", "skills", "projects", "contact"];
   return (
     <>
       {isOpen ? (
@@ -19,46 +20,19 @@ const Component = () => {
             />
           </div>
           <nav className="mt-16 flex flex-col">
-            <a
-              className="ml-10 flex flex-row"
-              href="#presentation"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              <span className="navbar_mobile_circle bg-Downriver"></span>
-              <Paragraph content={"presentation"} css={"navbar_mobile"} />
-            </a>
-            <a
-              className="ml-10 flex flex-row"
-              href="#abilities"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              <span className="navbar_mobile_circle bg-Bossanova"></span>
-              <Paragraph content={"skills"} css={"navbar_mobile"} />
-            </a>
-            <a
-              className="ml-10 flex flex-row"
-              href="#projets"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              <span className="navbar_mobile_circle bg-VinRouge"></span>
-              <Paragraph content={"projects"} css={"navbar_mobile"} />
-            </a>
-            <a
-              className="ml-10 flex flex-row"
-              href="#contact"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              <span className="navbar_mobile_circle bg-Charm"></span>
-              <Paragraph content={"contact"} css={"navbar_mobile"} />
-            </a>
+            {tabs.map((item, index) => (
+              <a
+                key={index}
+                href={`#${item}`}
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="ml-10 flex flex-row"
+              >
+                <span className={`navbar_mobile_circle ${item}`}></span>
+                <Paragraph content={item} css={"navbar_mobile"} />
+              </a>
+            ))}
           </nav>
         </div>
       ) : (
