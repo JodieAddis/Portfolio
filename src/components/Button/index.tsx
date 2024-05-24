@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface ButtonProps {
   content: string | ReactNode;
   css?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Component = ({ content, css, onClick }: ButtonProps) => {

@@ -13,7 +13,6 @@ import {
   passwordGenerator,
 } from "../../data/projectStack";
 import Skills from "../Skills";
-import IconSkills from "../../icons/IconSkills";
 import IconNetwork from "../../icons/IconNetwork";
 
 const Component = () => {
