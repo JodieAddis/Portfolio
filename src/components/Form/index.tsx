@@ -102,11 +102,13 @@ const Component = () => {
     setUserName(e.target.value);
   };
 
+  const re = /^[w.%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$/i;
+
   useEffect(() => {
     if (userEmailTouched) {
-      setUserEmailIsValid(userEmail.trim() !== "");
+      setUserEmailIsValid(userEmail.trim() !== "" && re.test(userEmail));
     }
-  }, [userName, userNameTouched]);
+  }, [userEmail, userEmailTouched]);
 
   const emailInputIsInvalid = !userEmailIsValid && userEmailTouched;
 
@@ -120,6 +122,9 @@ const Component = () => {
     setUserNameTouched(true);
     setUserEmailTouched(true);
 
+    if (!userNameIsValid) {
+      return;
+    }
     if (!userNameIsValid) {
       return;
     }
@@ -172,8 +177,8 @@ const Component = () => {
           value={userEmail}
           onChange={inputEmailHandler}
         />
-        {nameInputIsInvalid && (
-          <p className="mb-6 text-xs text-red-500">Name is required</p>
+        {emailInputIsInvalid && (
+          <p className="text-md mb-6 text-red-500">Email is required</p>
         )}
         <div className="flex justify-center">
           <Button
