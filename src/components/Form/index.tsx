@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Button from "../Button";
-import emailjs from "@emailjs/browser";
+// import { useState } from "react";
+// import Button from "../Button";
+// import emailjs from "@emailjs/browser";
 
 // const Component = () => {
 //   const [userName, setUserName] = useState<string>("");
@@ -73,42 +73,62 @@ import emailjs from "@emailjs/browser";
 //   );
 // };
 
-interface InputField {
-  userName: string;
-  userEmail: string;
-  message: string;
-}
+// export default Component;
+
+import { ChangeEvent, SetStateAction, useEffect, useState } from "react";
+import Button from "../Button";
+import emailjs from "@emailjs/browser";
 
 const Component = () => {
-  // const [userName, setUserName] = useState<string>("");
-  // const [userEmail, setUserEmail] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
+  const [userNameIsValid, setUserNameIsValid] = useState<boolean>(false); //Vérifie si le champ de l'input est valide
+  const [userNameTouched, setUserNameTouched] = useState<boolean>(false);
+
+  const [userEmail, setUserEmail] = useState<string>("");
+  const [userEmailIsValid, setUserEmailIsValid] = useState<boolean>(false);
+  const [userEmailTouched, setUserEmailTouched] = useState<boolean>(false);
+
   // const [message, setMessage] = useState<string>("");
 
-  const [inputField, setInputField] = useState<InputField>({
-    userName: "",
-    userEmail: "",
-    message: "",
-  });
-
-  const [submit, setSubmit] = useState<boolean>(false);
-
-  const validationForm = (field: InputField) => {
-    if (field.userName == "") {
-      console.log("empty field");
-    } else if (field.userEmail == "") {
-      console.log("empty field");
-    } else if (field.message == "") {
-      console.log("empty field");
+  useEffect(() => {
+    if (userNameTouched) {
+      setUserNameIsValid(userName.trim() !== "");
     }
+  }, [userName, userNameTouched]);
+
+  const nameInputIsInvalid = !userNameIsValid && userNameTouched;
+
+  const inputNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserName(e.target.value);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  useEffect(() => {
+    if (userEmailTouched) {
+      setUserEmailIsValid(userEmail.trim() !== "");
+    }
+  }, [userName, userNameTouched]);
+
+  const emailInputIsInvalid = !userEmailIsValid && userEmailTouched;
+
+  const inputEmailHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserEmail(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setUserNameTouched(true);
+    setUserEmailTouched(true);
+
+    if (!userNameIsValid) {
+      return;
+    }
+
     const formParams = {
-      user_name: inputField.userName,
-      user_email: inputField.userEmail,
+      user_name: userName,
+      user_email: userEmail,
       to_name: "Jodie",
-      message: inputField.message,
+      // message: message,
     };
 
     emailjs
@@ -120,14 +140,11 @@ const Component = () => {
       )
       .then((response) => {
         console.log("Email send succefully", response);
-        setInputField({
-          userName: "",
-          userEmail: "",
-          message: "",
-        });
+        setUserName("");
       })
       .catch((error) => {
         console.error("Error sending email:", error);
+        alert("champ vide, email non envoyé");
       });
   };
 
@@ -142,28 +159,22 @@ const Component = () => {
           type="text"
           className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white"
           placeholder="Name"
-          value={inputField.userName}
-          onChange={(e) =>
-            setInputField({ ...inputField, userName: e.target.value })
-          }
+          value={userName}
+          onChange={inputNameHandler}
         />
+        {nameInputIsInvalid && (
+          <p className="mb-6 text-xs text-red-500">Name is required</p>
+        )}
         <input
-          type="text"
+          type="email"
           className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white"
           placeholder="Email"
-          value={inputField.userEmail}
-          onChange={(e) =>
-            setInputField({ ...inputField, userEmail: e.target.value })
-          }
+          value={userEmail}
+          onChange={inputEmailHandler}
         />
-        <textarea
-          className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white"
-          placeholder="Message"
-          value={inputField.message}
-          onChange={(e) =>
-            setInputField({ ...inputField, message: e.target.value })
-          }
-        ></textarea>
+        {nameInputIsInvalid && (
+          <p className="mb-6 text-xs text-red-500">Name is required</p>
+        )}
         <div className="flex justify-center">
           <Button
             content={"send"}
