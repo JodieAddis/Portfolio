@@ -1,101 +1,38 @@
-import { ReactNode } from "react";
-import IconSkills from "../icons/IconSkills";
-import IconWeb from "../icons/IconWeb";
-
 export interface ProjectStackItem {
-  type: "icon" | "urlHost";
-  icon?: ReactNode;
-  name?: string;
-  url?: string;
-  host?: ReactNode;
+  name: string;
+  url: string;
+  img: string;
 }
 
-export const passwordGenerator: ProjectStackItem[] = [
-  { type: "icon", icon: <IconSkills kind={"react"} />, name: "react" },
+export const projectData: ProjectStackItem[] = [
   {
-    type: "icon",
-    icon: <IconSkills kind={"typescript"} />,
-    name: "typescript",
-  },
-  { type: "icon", icon: <IconSkills kind={"tailwind"} />, name: "tailwind" },
-  {
-    type: "urlHost",
-    url: "https://jodieaddis.github.io/Password-generator/",
-    host: <IconWeb />,
-  },
-];
-
-export const crowFunding: ProjectStackItem[] = [
-  { type: "icon", icon: <IconSkills kind={"react"} />, name: "react" },
-  {
-    type: "icon",
-    icon: <IconSkills kind={"typescript"} />,
-    name: "typescript",
-  },
-  { type: "icon", icon: <IconSkills kind={"tailwind"} />, name: "tailwind" },
-  {
-    type: "urlHost",
-    url: "https://65fea56c32d3f4e6395747c9-lhosmnuvto.chromatic.com/",
-    host: <IconSkills kind="storybook" />,
+    name: "dev jobs",
+    url: "#",
+    img: "../../public/assets/images/",
   },
   {
-    type: "urlHost",
-    url: "https://jodieaddis.github.io/crowdfunding_product_page/",
-    host: <IconWeb />,
-  },
-];
-
-export const onlineDictionary: ProjectStackItem[] = [
-  { type: "icon", icon: <IconSkills kind={"react"} />, name: "react" },
-  {
-    type: "icon",
-    icon: <IconSkills kind={"typescript"} />,
-    name: "typescript",
-  },
-  { type: "icon", icon: <IconSkills kind={"tailwind"} />, name: "tailwind" },
-  {
-    type: "urlHost",
-    url: "https://66028c5f30a593dce34bd401-kelrxyxbxg.chromatic.com/",
-    host: <IconSkills kind="storybook" />,
-  },
-  {
-    type: "urlHost",
-    url: "https://jodieaddis.github.io/online-dictionary/",
-    host: <IconWeb />,
-  },
-];
-
-export const eCommerceSnearkers: ProjectStackItem[] = [
-  { type: "icon", icon: <IconSkills kind={"react"} />, name: "react" },
-  {
-    type: "icon",
-    icon: <IconSkills kind={"typescript"} />,
-    name: "typescript",
-  },
-  { type: "icon", icon: <IconSkills kind={"tailwind"} />, name: "tailwind" },
-  {
-    type: "urlHost",
-    url: "https://6644b697f6f99754887beb30-wfxbruhnsu.chromatic.com/?path=/docs/components-button--docs",
-    host: <IconSkills kind="storybook" />,
-  },
-  {
-    type: "urlHost",
-    url: "https://jodieaddis.github.io/e-commerce-sneakers/",
-    host: <IconWeb />,
-  },
-];
-
-export const planetFactSite: ProjectStackItem[] = [
-  { type: "icon", icon: <IconSkills kind={"react"} />, name: "react" },
-  {
-    type: "icon",
-    icon: <IconSkills kind={"typescript"} />,
-    name: "typescript",
-  },
-  { type: "icon", icon: <IconSkills kind={"tailwind"} />, name: "tailwind" },
-  {
-    type: "urlHost",
+    name: "planets fact site",
     url: "https://planets-fact-site-rosy-delta.vercel.app/",
-    host: <IconWeb />,
+    img: "../../public/assets/images/planets-fact-site.png",
+  },
+  {
+    name: "e-commerce sneakers",
+    url: "https://jodieaddis.github.io/e-commerce-sneakers/",
+    img: "../../public/assets/images/e-commerce-sneakers.png",
+  },
+  {
+    name: "online dictionnary",
+    url: "https://jodieaddis.github.io/online-dictionary/",
+    img: "../../public/assets/images/online-dictionary.png",
+  },
+  {
+    name: "crowFunding product page",
+    url: "https://jodieaddis.github.io/crowdfunding_product_page/",
+    img: "../../public/assets/images/crowdfunding_product_page.png",
+  },
+  {
+    name: "password generator",
+    url: "https://jodieaddis.github.io/Password-generator/",
+    img: "../../public/assets/images/password-generator.png",
   },
 ];

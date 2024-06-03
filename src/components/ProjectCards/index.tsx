@@ -1,29 +1,43 @@
-import { ReactNode } from "react";
-import Paragraph from "../../typographies/Paragraph";
+import Heading from "../../typographies/Heading";
 
 interface ProjectCardsProps {
-  name: string | ReactNode;
-  stack: string | ReactNode;
-  hosting: string | ReactNode;
+  name: string;
+  url: string;
+  imgPath: string;
+  imgAlt: string;
+  index: number;
 }
 
-const Component = ({ name, stack, hosting }: ProjectCardsProps) => {
+const Component = ({
+  name,
+  url,
+  imgPath,
+  imgAlt,
+  index,
+}: ProjectCardsProps) => {
   return (
-    <div className="flex justify-center">
-      <div className="m-8 flex  w-[280px] flex-col items-center rounded-xl border-2 border-solid border-white bg-black bg-opacity-30">
-        <div className="mt-2.5 flex h-[140px] w-[220px] items-center justify-center rounded-xl border-2 border-solid border-white bg-VinRouge bg-opacity-20 lg:w-[250px] lg:flex-col">
-          <Paragraph
-            content={name}
-            css={"uppercase font-Montserrat font-bold text-lg text-center mx-4"}
+    <a
+      className="my-8 w-[280px] lg:mx-4 lg:w-[350px]"
+      href={url}
+      target="_blank"
+      key={index}
+    >
+      <div className=" w-full rounded-lg border-[1px] border-solid border-white ">
+        <div className="flex w-full flex-row border-b-[1px] border-white bg-VinRouge bg-opacity-30">
+          <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
+          <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
+          <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
+        </div>
+        <div className="h-[180px] w-full overflow-hidden rounded-b-lg">
+          <img
+            src={imgPath}
+            alt={imgAlt}
+            className="rounded-b-lg object-cover"
           />
         </div>
-        <div className="mx-3 flex w-full flex-col items-center justify-center">
-          <div className="my-6 flex flex-row">{stack}</div>
-          <div className="h-[1px] w-1/2 bg-white"></div>
-          <div className="my-6 flex flex-row">{hosting}</div>
-        </div>
       </div>
-    </div>
+      <Heading kind={"h3"} content={name} css={"uppercase text-center mt-3"} />
+    </a>
   );
 };
 

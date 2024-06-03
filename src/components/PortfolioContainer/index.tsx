@@ -5,15 +5,10 @@ import Form from "../Form";
 import PresentationDesktop from "../Presentation/PresentationDesktop";
 import PresentationMobile from "../Presentation/PresentationMobile";
 import ProjectCards from "../ProjectCards";
-import {
-  eCommerceSnearkers,
-  planetFactSite,
-  onlineDictionary,
-  crowFunding,
-  passwordGenerator,
-} from "../../data/projectStack";
+import { projectData } from "../../data/projectStack";
 import Skills from "../Skills";
 import IconNetwork from "../../icons/IconNetwork";
+import SectionProjects from "../Section/SectionProjects";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -63,113 +58,8 @@ const Component = () => {
           content={"Exploring my web universe:"}
           css={"section_paragraph"}
         />
-        <div className=" section_design flex flex-col border-VinRouge lg:flex-row lg:flex-wrap lg:justify-between">
-          <ProjectCards
-            name={"planet fact site"}
-            stack={planetFactSite.map((item, index) => (
-              <div>
-                {item.type === "icon" && (
-                  <div className="project_stack" key={index}>
-                    {item.icon}
-                  </div>
-                )}
-              </div>
-            ))}
-            hosting={planetFactSite.map((item, index) => (
-              <div className="flex flex-row" key={index}>
-                {item.type === "urlHost" && (
-                  <a href={item.url} className="project_stack" target="blank_">
-                    {item.host}
-                  </a>
-                )}
-              </div>
-            ))}
-          />
-
-          <ProjectCards
-            name={"e-commerce"}
-            stack={eCommerceSnearkers.map((item, index) => (
-              <div>
-                {item.type === "icon" && (
-                  <div className="project_stack" key={index}>
-                    {item.icon}
-                  </div>
-                )}
-              </div>
-            ))}
-            hosting={eCommerceSnearkers.map((item, index) => (
-              <div className="flex flex-row" key={index}>
-                {item.type === "urlHost" && (
-                  <a href={item.url} className="project_stack" target="blank_">
-                    {item.host}
-                  </a>
-                )}
-              </div>
-            ))}
-          />
-          <ProjectCards
-            name={"online dictionary"}
-            stack={onlineDictionary.map((item, index) => (
-              <div>
-                {item.type === "icon" && (
-                  <div className="project_stack" key={index}>
-                    {item.icon}
-                  </div>
-                )}
-              </div>
-            ))}
-            hosting={onlineDictionary.map((item, index) => (
-              <div className="flex flex-row" key={index}>
-                {item.type === "urlHost" && (
-                  <a href={item.url} className="project_stack" target="blank_">
-                    {item.host}
-                  </a>
-                )}
-              </div>
-            ))}
-          />
-          <ProjectCards
-            name={"crowdfunding product page"}
-            stack={crowFunding.map((item, index) => (
-              <div>
-                {item.type === "icon" && (
-                  <div className="project_stack" key={index}>
-                    {item.icon}
-                  </div>
-                )}
-              </div>
-            ))}
-            hosting={crowFunding.map((item, index) => (
-              <div className="flex flex-row" key={index}>
-                {item.type === "urlHost" && (
-                  <a href={item.url} className="project_stack" target="blank_">
-                    {item.host}
-                  </a>
-                )}
-              </div>
-            ))}
-          />
-          <ProjectCards
-            name={"password generator"}
-            stack={passwordGenerator.map((item, index) => (
-              <div>
-                {item.type === "icon" && (
-                  <div className="project_stack" key={index}>
-                    {item.icon}
-                  </div>
-                )}
-              </div>
-            ))}
-            hosting={passwordGenerator.map((item, index) => (
-              <div className="flex flex-row" key={index}>
-                {item.type === "urlHost" && (
-                  <a href={item.url} className="project_stack" target="blank_">
-                    {item.host}
-                  </a>
-                )}
-              </div>
-            ))}
-          />
+        <div className=" section_design flex flex-col items-center border-VinRouge lg:flex-row lg:flex-wrap lg:justify-center">
+          <SectionProjects />
         </div>
       </section>
       <section className="mb-10 mt-28">
