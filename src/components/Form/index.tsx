@@ -78,6 +78,7 @@
 import { ChangeEvent, SetStateAction, useEffect, useState } from "react";
 import Button from "../Button";
 import emailjs from "@emailjs/browser";
+import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => {
   const [userName, setUserName] = useState<string>("");
@@ -88,7 +89,9 @@ const Component = () => {
   const [userEmailIsValid, setUserEmailIsValid] = useState<boolean>(false);
   const [userEmailTouched, setUserEmailTouched] = useState<boolean>(false);
 
-  // const [message, setMessage] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [messageIsValid, setMessageIsValid] = useState<boolean>(false);
+  const [messageTouched, setMessageTouched] = useState<boolean>(false);
 
   useEffect(() => {
     if (userNameTouched) {
@@ -102,7 +105,7 @@ const Component = () => {
     setUserName(e.target.value);
   };
 
-  const re = /^[w.%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$/i;
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   useEffect(() => {
     if (userEmailTouched) {
@@ -111,9 +114,20 @@ const Component = () => {
   }, [userEmail, userEmailTouched]);
 
   const emailInputIsInvalid = !userEmailIsValid && userEmailTouched;
-
   const inputEmailHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setUserEmail(e.target.value);
+  };
+
+  useEffect(() => {
+    if (messageTouched) {
+      setMessageIsValid(message.trim() !== "");
+    }
+  }, [userName, userNameTouched]);
+
+  const messageInputIsInvalid = !messageIsValid && messageTouched;
+
+  const inputMessageHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(e.target.value);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -121,11 +135,15 @@ const Component = () => {
 
     setUserNameTouched(true);
     setUserEmailTouched(true);
+    setMessageTouched(true);
 
     if (!userNameIsValid) {
       return;
     }
-    if (!userNameIsValid) {
+    if (!userEmailIsValid) {
+      return;
+    }
+    if (!messageIsValid) {
       return;
     }
 
@@ -133,7 +151,7 @@ const Component = () => {
       user_name: userName,
       user_email: userEmail,
       to_name: "Jodie",
-      // message: message,
+      message: message,
     };
 
     emailjs
@@ -149,7 +167,6 @@ const Component = () => {
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        alert("champ vide, email non envoyé");
       });
   };
 
@@ -168,7 +185,10 @@ const Component = () => {
           onChange={inputNameHandler}
         />
         {nameInputIsInvalid && (
-          <p className="mb-6 text-xs text-red-500">Name is required</p>
+          <Paragraph
+            content="Name is required"
+            css="mb-6 text-xs text-red-500"
+          />
         )}
         <input
           type="email"
@@ -178,7 +198,22 @@ const Component = () => {
           onChange={inputEmailHandler}
         />
         {emailInputIsInvalid && (
-          <p className="text-md mb-6 text-red-500">Email is required</p>
+          <Paragraph
+            content="Email is required"
+            css="text-md mb-6 text-red-500"
+          />
+        )}
+        <textarea
+          className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white"
+          placeholder="Message"
+          value={message}
+          onChange={inputMessageHandler}
+        ></textarea>
+        {messageInputIsInvalid && (
+          <Paragraph
+            content="Please, write your message"
+            css="text-md mb-6 text-red-500"
+          />
         )}
         <div className="flex justify-center">
           <Button
