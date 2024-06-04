@@ -214,15 +214,19 @@ const Component = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center lg:ml-8 lg:items-start ">
+    <div className="flex flex-col items-center justify-center lg:ml-8 lg:w-full lg:items-start ">
+      <Paragraph
+        content="Envie de me contacter ? Remplissez le formulaire ci-dessous !"
+        css="font-Kumbh text-left uppercase tracking-widest lg:w-4/5 w-5/6 mt-8 lg:mt-0"
+      />
       <form
         action=""
-        className="mt-8 flex w-5/6 flex-col lg:w-1/4"
+        className="mt-6 flex w-5/6 flex-col"
         onSubmit={handleSubmit}
       >
         <input
           type="text"
-          className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white"
+          className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white lg:py-2"
           placeholder="Name"
           value={userName}
           onChange={inputNameHandler}
@@ -233,6 +237,21 @@ const Component = () => {
             css="mb-6 text-xs text-red-500"
           />
         )}
+        <input
+          type="email"
+          className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white lg:py-2"
+          placeholder="Email"
+          // value={userEmail}
+          // onChange={inputEmailHandler}
+        />
+        <textarea
+          className="mb-6 rounded-lg border-b-[2px] border-solid border-white bg-Charm bg-opacity-20 py-1 pl-3 font-Kumbh text-white"
+          placeholder="Message"
+          // value={message}
+          // onChange={inputMessageHandler}
+          rows={6}
+          required
+        ></textarea>
         <div className="flex justify-center">
           <Button
             content={"send"}

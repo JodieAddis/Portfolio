@@ -7,30 +7,33 @@ import useScreenSize from "../../hook/useScreenSize";
 const Component = () => {
   const [showSkills, setShowSkills] = useState(false);
 
-  const visibleSkills = showSkills ? skills : skills.slice(0, 5);
+  const visibleSkills = showSkills ? skills : skills.slice(0, 6);
 
   const isMobile = useScreenSize();
   return (
-    <div className="flex flex-col items-center lg:flex-row lg:flex-wrap lg:justify-center">
+    <div className=" lg:grid lg:grid-cols-7">
       {isMobile ? (
         <>
-          {visibleSkills.map((skill, index) => (
-            <StackCards
-              key={index}
-              iconLogo={skill.icon}
-              stackName={skill.name}
-            />
-          ))}
-
-          {!showSkills && (
-            <Button
-              content={"see more"}
-              onClick={() => {
-                setShowSkills(true);
-              }}
-              css="my-10 capitalize font-Kumbh py-2 px-4 border-Bossanova border-solid border-2 rounded-lg hover:bg-white hover:text-Bossanova hover:font-extrabold"
-            />
-          )}
+          <div className="grid grid-cols-2">
+            {visibleSkills.map((skill, index) => (
+              <StackCards
+                key={index}
+                iconLogo={skill.icon}
+                stackName={skill.name}
+              />
+            ))}
+          </div>
+          <div className="flex justify-center">
+            {!showSkills && (
+              <Button
+                content={"see more"}
+                onClick={() => {
+                  setShowSkills(true);
+                }}
+                css="my-10 capitalize font-Kumbh py-2 px-4 border-Bossanova border-solid border-2 rounded-lg hover:bg-white hover:text-Bossanova hover:font-extrabold"
+              />
+            )}
+          </div>
         </>
       ) : (
         <>
