@@ -4,7 +4,7 @@ import Paragraph from "../../../typographies/Paragraph";
 import IconNavBar from "../../../icons/IconNavBar";
 
 const Component = () => {
-  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const tabs = ["presentation", "skills", "projects", "contact"];
   return (
     <>

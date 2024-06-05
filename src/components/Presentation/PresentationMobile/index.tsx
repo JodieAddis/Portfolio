@@ -1,8 +1,6 @@
-import useScreenSize from "../../../hook/useScreenSize";
 import Paragraph from "../../../typographies/Paragraph";
 
 const Component = () => {
-  const isMobile = useScreenSize();
   return (
     <div className="m-6 ">
       <div className="mt-8 flex flex-col items-center justify-center">

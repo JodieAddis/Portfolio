@@ -4,8 +4,6 @@ import Paragraph from "../../typographies/Paragraph";
 import Form from "../Form";
 import PresentationDesktop from "../Presentation/PresentationDesktop";
 import PresentationMobile from "../Presentation/PresentationMobile";
-import ProjectCards from "../ProjectCards";
-import { projectData } from "../../data/projectStack";
 import Skills from "../Skills";
 import IconNetwork from "../../icons/IconNetwork";
 import SectionProjects from "../Section/SectionProjects";
