@@ -1,3 +1,4 @@
+import WordRotate from "../../MagicUi/WordRotate/index";
 import Paragraph from "../../../typographies/Paragraph";
 
 const Component = () => {
@@ -5,7 +6,7 @@ const Component = () => {
     <div className="m-16 ">
       <div className="flex flex-row items-center justify-center">
         <div>
-          <div className="border-Downriver mr-16 h-64 w-64 rounded-full border-[3px] border-solid"></div>
+          <div className="mr-16 h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
         </div>
         <Paragraph
           content={
@@ -24,7 +25,10 @@ const Component = () => {
           }
         />
         <div>
-          <div className="border-Downriver ml-16 h-64 w-64 rounded-full border-[3px] border-solid"></div>
+          <div className="ml-16 h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
+        </div>
+        <div>
+          <WordRotate words={["jodie", "cass", "Loic"]} />
         </div>
       </div>
     </div>
