@@ -51,6 +51,7 @@ import ProjectCards from "../../ProjectCards";
 import { projectData } from "../../../data/projectStack";
 import useScreenSize from "../../../hook/useScreenSize";
 import Button from "../../Button";
+import Heading from "../../../typographies/Heading";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -85,14 +86,21 @@ const Component = () => {
       ) : (
         <>
           {projectData.map((project, index) => (
-            <ProjectCards
-              key={index}
-              name={project.name}
-              url={project.url}
-              imgPath={project.img}
-              imgAlt={`Home page picture of the application "${project.name}"`}
-              index={index}
-            />
+            <div className="my-10 flex flex-col">
+              <ProjectCards
+                key={index}
+                name={project.name}
+                url={project.url}
+                imgPath={project.img}
+                imgAlt={`Home page picture of the application "${project.name}"`}
+                index={index}
+              />
+              <Heading
+                kind={"h3"}
+                content={project.name}
+                css={"uppercase text-center"}
+              />
+            </div>
           ))}
         </>
       )}

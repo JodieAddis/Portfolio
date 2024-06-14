@@ -1,6 +1,5 @@
 import { ChangeEvent, useState } from "react";
 import Button from "../Button";
-import { AnimatedSubscribeButton } from "../MagicUi/AnimatedButton";
 import emailjs from "@emailjs/browser";
 import Paragraph from "../../typographies/Paragraph";
 import { validateForm } from "../../utils/validateForm";
@@ -125,21 +124,9 @@ const Component = () => {
           />
         )}
         <div className="flex justify-center">
-          {/* <Button
+          <Button
             content={"send"}
             css="mb-6 capitalize font-Kumbh py-2 px-4 border-Charm border-solid border-2 rounded-lg hover:bg-white hover:text-Charm hover:font-extrabold"
-          /> */}
-
-          <AnimatedSubscribeButton
-            buttonColor="#000000"
-            buttonTextColor="#ffffff"
-            subscribeStatus={false}
-            initialText={
-              <span className="group inline-flex items-center">Send</span>
-            }
-            changeText={
-              <span className="group inline-flex items-center">Sended </span>
-            }
           />
         </div>
       </form>
