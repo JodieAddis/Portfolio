@@ -20,7 +20,7 @@
     @apply bg-BlueCharcoal bg-[url('../images/background.png')] bg-cover text-white;
   }
   .navbar_desktop {
-    @apply relative list-none px-3 pt-5 font-Montserrat text-sm uppercase;
+    @apply relative list-none px-3 font-Montserrat text-sm uppercase;
   }
   a.navbar_desktop::after {
     @apply absolute -bottom-[8px] left-1/2 h-[2px] bg-white duration-500 content-[""];
@@ -70,5 +70,8 @@
   }
   .contact {
     @apply bg-Charm;
+  }
+  .footer_item {
+    @apply mx-4 cursor-pointer font-Montserrat text-sm font-light tracking-widest;
   }
 }
