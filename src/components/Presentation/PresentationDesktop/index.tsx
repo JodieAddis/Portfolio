@@ -12,10 +12,16 @@ const Component = () => {
           content={
             <div className="relative flex flex-col overflow-hidden">
               <span>
-                Hi, My name is Jodie. I'm a React Developer who is{" "}
-                <div className="absolute -bottom-2 left-8 flex justify-center self-center uppercase">
+                Hi, My name is Jodie. I'm a React Developer and I'm{" "}
+                <div className="absolute -bottom-2 left-16 flex justify-center self-center capitalize">
                   <WordRotate
-                    words={["motivated", "curious", "cooperative", "organized"]}
+                    words={[
+                      "Sci-Fi film aficionado",
+                      "fantasy story devotee",
+                      "nature lover",
+                      "photography enthusiast",
+                      "aspiring artist",
+                    ]}
                   />
                 </div>
               </span>
@@ -27,15 +33,15 @@ const Component = () => {
       <div className="mt-16 flex flex-col items-center justify-center lg:flex-row">
         <Paragraph
           content={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "S'intéresse à ce qui m'entoure depuis petite : comprendre comment les choses fonctionnent et pourquoi. Cursus scientifique pour la nature et les organismes et ensuite la reconversion vers l'informatique, connaissance dev qui a attisé mon interet sur le fonctionnement des sites et le code qu'il y a derrière. Depuis je code des projets et continuent à apprendre tous les jours. "
           }
           css={
-            "text-xl leading-relaxed mr-16 text-justify leading-relaxed font-Kumbh tracking-widest"
+            "text-xl leading-relaxed text-justify leading-relaxed font-Kumbh tracking-widest"
           }
         />
-        <div>
+        {/* <div>
           <div className="ml-16 h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

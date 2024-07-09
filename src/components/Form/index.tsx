@@ -73,10 +73,6 @@ const Component = () => {
 
   return (
     <div className="flex flex-col items-center justify-center lg:ml-8 lg:w-full lg:items-start ">
-      <Paragraph
-        content="Envie de me contacter ? Remplissez le formulaire ci-dessous !"
-        css="font-Kumbh text-left uppercase tracking-widest lg:w-4/5 w-5/6 mt-8 lg:mt-0"
-      />
       <form className="mt-6 flex w-5/6 flex-col" onSubmit={handleSubmit}>
         <input
           type="text"

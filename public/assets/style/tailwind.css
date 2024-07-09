@@ -17,11 +17,21 @@
     @apply h-screen;
   }
   body {
-    @apply bg-BlueCharcoal bg-[url('../images/background-stars.svg')] bg-cover text-white;
+    @apply bg-BlueCharcoal bg-[url('../images/background.png')] bg-cover text-white;
   }
   .navbar_desktop {
-    @apply list-none px-3 py-5 font-Montserrat text-sm uppercase;
+    @apply relative list-none px-3 pt-5 font-Montserrat text-sm uppercase;
   }
+  a.navbar_desktop::after {
+    @apply absolute -bottom-[8px] left-1/2 h-[2px] bg-white duration-500 content-[""];
+    width: 0;
+    transform: translateX(-50%);
+    transition: width 0.5s;
+  }
+  a.navbar_desktop:hover::after {
+    width: 100%;
+  }
+
   .navbar_mobile {
     @apply my-6 ml-6 list-none font-Montserrat font-bold uppercase tracking-widest;
   }

@@ -75,9 +75,6 @@ const Component = () => {
           id={"contact"}
         />
         <div className="section_design flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10">
-          <div className="lg:flex lg:w-1/2 lg:justify-center">
-            <Form />
-          </div>
           <div className="flex flex-col items-center justify-center lg:w-1/2">
             <Paragraph
               content="Si vous désirez en savoir plus sur mon parcours et mes projets, direction les réseaux sociaux"
@@ -95,6 +92,9 @@ const Component = () => {
                 <IconNetwork name="linkedin" />
               </a>
             </div>
+          </div>
+          <div className="lg:flex lg:w-1/2 lg:justify-center">
+            <Form />
           </div>
         </div>
       </section>
