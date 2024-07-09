@@ -6,18 +6,17 @@ const Component = () => {
   const isMobile = useScreenSize();
 
   return (
-    <div className="bg-BlueCharcoal ">
+    <div className="w-screen bg-BlueCharcoal ">
       {isMobile ? (
         <div>
           <NavBarMobile />
         </div>
       ) : (
         <div className="mx-8 flex justify-between">
-          <p>LOGO</p>
+          <div></div>
           <NavBarDesktop />
         </div>
       )}
-      <div className="h-[1px] w-screen bg-white"></div>
     </div>
   );
 };

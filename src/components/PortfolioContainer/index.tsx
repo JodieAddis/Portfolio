@@ -7,6 +7,7 @@ import PresentationMobile from "../Presentation/PresentationMobile";
 import Skills from "../Skills";
 import IconNetwork from "../../icons/IconNetwork";
 import SectionProjects from "../Section/SectionProjects";
+import Meteors from "../MagicUi/Meteors";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -56,7 +57,13 @@ const Component = () => {
           content={"Exploring my web universe:"}
           css={"section_paragraph"}
         />
-        <div className=" section_design flex flex-col items-center border-VinRouge lg:flex-row lg:flex-wrap lg:justify-center">
+        <div className="section_design  relative flex flex-col items-center overflow-hidden border-VinRouge lg:flex-row lg:flex-wrap lg:justify-center">
+          <div className="absolute left-0 top-0 -z-10 h-full">
+            <Meteors />
+          </div>
+          <div className="absolute left-0 top-1/2 -z-10 h-full">
+            <Meteors />
+          </div>
           <SectionProjects />
         </div>
       </section>
@@ -68,9 +75,6 @@ const Component = () => {
           id={"contact"}
         />
         <div className="section_design flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10">
-          <div className="lg:flex lg:w-1/2 lg:justify-center">
-            <Form />
-          </div>
           <div className="flex flex-col items-center justify-center lg:w-1/2">
             <Paragraph
               content="Si vous désirez en savoir plus sur mon parcours et mes projets, direction les réseaux sociaux"
@@ -88,6 +92,9 @@ const Component = () => {
                 <IconNetwork name="linkedin" />
               </a>
             </div>
+          </div>
+          <div className="lg:flex lg:w-1/2 lg:justify-center">
+            <Form />
           </div>
         </div>
       </section>

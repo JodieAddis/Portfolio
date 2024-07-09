@@ -17,7 +17,7 @@ const Component = ({
 }: ProjectCardsProps) => {
   return (
     <a
-      className="my-10 w-[280px] lg:mx-4 lg:w-[350px] lg:transition lg:duration-100 lg:hover:rotate-6 lg:hover:scale-110"
+      className="mb-4 w-[280px] lg:mx-6 lg:w-[330px] lg:transition lg:duration-100 lg:hover:rotate-6 lg:hover:scale-[115%]"
       href={url}
       target="_blank"
       key={index}
@@ -36,7 +36,7 @@ const Component = ({
           />
         </div>
       </div>
-      <Heading kind={"h3"} content={name} css={"uppercase text-center mt-3"} />
+      {/* <Heading kind={"h3"} content={name} css={"uppercase text-center mt-3"} /> */}
     </a>
   );
 };
