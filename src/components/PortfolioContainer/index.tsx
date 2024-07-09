@@ -75,23 +75,23 @@ const Component = () => {
           id={"contact"}
         />
         <div className="section_design flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10">
-          <div className="flex flex-col items-center justify-center lg:w-1/2">
+          <div className="mt-8 flex flex-col items-center lg:w-1/2">
             <Paragraph
-              content="Si vous désirez en savoir plus sur mon parcours et mes projets, direction les réseaux sociaux"
-              css="mb-6 text-white text-opacity-80 text-center mt-8 text-base font-Kumbh tracking-widest mx-5"
+              content="If you would like to discuss my background and/or my work expectations in web development in more detail, you can contact me via LinkedIn, by email, or by filling out the form next to this."
+              css="mb-8 text-white text-opacity-80 text-lg font-Kumbh tracking-widest mx-5 ml-14 text-justify"
             />
             <div className="mb-8 flex flex-row ">
-              <a
-                href="https://github.com/JodieAddis"
-                target="blank_"
-                className="mr-4"
-              >
-                <IconNetwork name="github" />
-              </a>
               <a href="https://www.linkedin.com/in/jodieaddis/" target="blank_">
                 <IconNetwork name="linkedin" />
               </a>
+              <a href="mailto:jodie.addis.92@gmail.com" className="ml-6">
+                <IconNetwork name="mail" />
+              </a>
             </div>
+            <Paragraph
+              content="I am available to discuss online or in person during an interview."
+              css="mb-6 text-white text-opacity-80 text-lg font-Kumbh tracking-widest mx-5 ml-14 text-justify"
+            />
           </div>
           <div className="lg:flex lg:w-1/2 lg:justify-center">
             <Form />
