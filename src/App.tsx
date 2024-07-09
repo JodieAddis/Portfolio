@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import PortfolioContainer from "./components/PortfolioContainer";
 
@@ -10,7 +11,9 @@ function App() {
       <main>
         <PortfolioContainer />
       </main>
-      <footer className="text-center">Copyright 2024</footer>
+      <footer className="text-center">
+        <Footer />
+      </footer>
     </>
   );
 }
