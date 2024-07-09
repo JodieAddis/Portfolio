@@ -31,17 +31,32 @@ const Component = () => {
         />
       </div>
       <div className="mt-16 flex flex-col items-center justify-center lg:flex-row">
-        <Paragraph
-          content={
-            "S'intéresse à ce qui m'entoure depuis petite : comprendre comment les choses fonctionnent et pourquoi. Cursus scientifique pour la nature et les organismes et ensuite la reconversion vers l'informatique, connaissance dev qui a attisé mon interet sur le fonctionnement des sites et le code qu'il y a derrière. Depuis je code des projets et continuent à apprendre tous les jours. "
-          }
-          css={
-            "text-xl leading-relaxed text-justify leading-relaxed font-Kumbh tracking-widest"
-          }
-        />
-        {/* <div>
-          <div className="ml-16 h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
-        </div> */}
+        <div>
+          <Paragraph
+            content={
+              "Curiosity has always been a part of me, ever since I was young. I've always been interested in my surroundings because I love to understand how things work and why. This curiosity led me to pursue a scientific education, and it's also what, a year ago, steered me toward a career change into web development."
+            }
+            css={
+              "text-xl leading-relaxed text-justify leading-relaxed font-Kumbh tracking-widest"
+            }
+          />
+          <Paragraph
+            content={
+              "I quickly became interested in coding and how websites are built. After a first professional experience, I continue today to code various projects to learn more about web technologies."
+            }
+            css={
+              "mt-8 text-xl leading-relaxed text-justify leading-relaxed font-Kumbh tracking-widest"
+            }
+          />
+          <Paragraph
+            content={
+              "My goal is to keep improving my web development skills by exploring new technologies and working on innovative projects. I am also motivated by continuous learning and collaborating with other developers to create effective and elegant web solutions."
+            }
+            css={
+              "mt-8 text-xl leading-relaxed text-justify leading-relaxed font-Kumbh tracking-widest"
+            }
+          />
+        </div>
       </div>
     </div>
   );
