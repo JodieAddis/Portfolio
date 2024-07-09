@@ -13,7 +13,7 @@ const Component = () => {
             <div className="relative flex flex-col overflow-hidden">
               <span>
                 Hi, My name is Jodie. I'm a React Developer and I'm{" "}
-                <div className="absolute -bottom-2 left-16 flex justify-center self-center capitalize">
+                <div className="absolute -bottom-2 left-16 z-10 flex justify-center self-center capitalize">
                   <WordRotate
                     words={[
                       "Sci-Fi film aficionado",

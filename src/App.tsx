@@ -4,7 +4,7 @@ import PortfolioContainer from "./components/PortfolioContainer";
 function App() {
   return (
     <>
-      <header className="fixed top-0">
+      <header className="fixed top-0 z-50">
         <Header />
       </header>
       <main>

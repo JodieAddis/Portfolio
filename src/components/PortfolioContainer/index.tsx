@@ -25,7 +25,13 @@ const Component = () => {
           content={"Within the space, a new React developer is born:"}
           css={"section_paragraph"}
         />
-        <div className="section_design border-Downriver">
+        <div className="section_design relative overflow-hidden border-Downriver">
+          <div className="absolute left-0 top-0 -z-10 h-full">
+            <Meteors />
+          </div>
+          <div className="absolute left-0 top-1/2 -z-10 h-full">
+            <Meteors />
+          </div>
           {isMobile ? <PresentationMobile /> : <PresentationDesktop />}
         </div>
       </section>
