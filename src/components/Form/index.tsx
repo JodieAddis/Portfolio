@@ -1,9 +1,10 @@
-import { ChangeEvent, useState } from "react";
 import Button from "../Button";
+import { ChangeEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { formError } from "../../types/interface";
+import Modal from "../Modal";
 import Paragraph from "../../typographies/Paragraph";
 import { validateForm } from "../../utils/validateForm";
-import { formError } from "../../types/interface";
 
 const Component = () => {
   const [userName, setUserName] = useState<string>("");
@@ -16,6 +17,8 @@ const Component = () => {
     message: "",
     formatError: "",
   });
+
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   const isValidate = validateForm({
     userName: userName,
@@ -61,7 +64,8 @@ const Component = () => {
         setUserName("");
         setUserEmail("");
         setMessage("");
-        alert("message envoyé");
+        // alert("message envoyé");
+        setModalIsOpen(true);
         // remplacer par une belle popup
       })
       .catch((error) => {
@@ -73,6 +77,17 @@ const Component = () => {
 
   return (
     <div className="flex flex-col items-center justify-center lg:ml-8 lg:w-full lg:items-start ">
+      {modalIsOpen ? (
+        ""
+      ) : (
+        <Modal
+          text="message send"
+          btnContent="x"
+          onclick={() => {
+            setModalIsOpen(false);
+          }}
+        />
+      )}
       <form className="mt-6 flex w-5/6 flex-col" onSubmit={handleSubmit}>
         <input
           type="text"
