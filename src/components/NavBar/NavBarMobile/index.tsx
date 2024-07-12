@@ -37,7 +37,7 @@ const Component = () => {
         </div>
       ) : (
         <div className="flex justify-between p-4">
-          <p>LOGO</p>
+          <div></div>
           <Button
             content={<IconNavBar kind={"open"} />}
             onClick={() => {

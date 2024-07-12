@@ -14,7 +14,7 @@ const Component = () => {
 
   return (
     <>
-      <section className="mt-40">
+      <section className="mt-20 lg:mt-40">
         <Heading
           kind={"h2"}
           content={"about"}
@@ -87,7 +87,7 @@ const Component = () => {
           <div className="mt-8 flex flex-col items-center lg:w-1/2">
             <Paragraph
               content="If you would like to discuss my background and/or my work expectations in web development in more detail, you can contact me via LinkedIn, by email, or by filling out the form next to this."
-              css="mb-8 text-white text-opacity-80 text-lg font-Kumbh tracking-widest mx-5 ml-14 text-justify"
+              css="mb-8 text-white text-opacity-80 text-xl font-Kumbh mx-5 lg:ml-14 text-justify lg:tracking-widest"
             />
             <div className="mb-8 flex flex-row ">
               <a href="https://www.linkedin.com/in/jodieaddis/" target="blank_">
@@ -99,10 +99,10 @@ const Component = () => {
             </div>
             <Paragraph
               content="I am available to discuss online or in person during an interview."
-              css="mb-6 text-white text-opacity-80 text-lg font-Kumbh tracking-widest mx-5 ml-14 text-justify"
+              css="mb-6 text-white text-opacity-80 text-xl font-Kumbh lg:tracking-widest mx-5 lg:ml-14 text-justify"
             />
           </div>
-          <div className="lg:flex lg:w-1/2 lg:justify-center">
+          <div className="mb-8 lg:mb-0 lg:flex lg:w-1/2 lg:justify-center">
             <Form />
           </div>
         </div>

@@ -1,31 +1,31 @@
 import Paragraph from "../../../typographies/Paragraph";
+import profilePicture from "../../../../public/assets/images/profile-picture.webp";
 
 const Component = () => {
   return (
-    <div className="m-6 ">
+    <div className="m-8 ">
       <div className="mt-8 flex flex-col items-center justify-center">
         <div>
-          <div className="h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
+          <div className="h-64 w-64 rounded-full border-[3px] border-solid border-Downriver">
+            <img src={profilePicture} alt="Profile picture" />
+          </div>
         </div>
         <Paragraph
-          content={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          }
-          css={"text-xl leading-relaxed text-justify font-Kumbh mt-8"}
+          content="Hi, My name is Jodie. I'm a React Developer."
+          css="text-2xl leading-relaxed text-center font-Kumbh mt-8"
         />
       </div>
-      <div className="mt-8 flex flex-col items-center justify-center lg:flex-row">
-        <div>
-          <div className="h-64 w-64 rounded-full border-[3px] border-solid border-Downriver"></div>
-        </div>
-      </div>
       <Paragraph
-        content={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        }
-        css={
-          "text-sm leading-relaxed text-justify leading-relaxed font-Kumbh tracking-widest mt-8"
-        }
+        content="Curiosity has always been a part of me, ever since I was young. I've always been interested in my surroundings because I love to understand how things work and why. This curiosity led me to pursue a scientific education, and it's also what, a year ago, steered me toward a career change into web development."
+        css="text-xl leading-relaxed text-justify leading-relaxed font-Kumbh mt-14"
+      />
+      <Paragraph
+        content="I quickly became interested in coding and how websites are built. After a first professional experience, I continue today to code various projects to learn more about web technologies."
+        css="mt-8 text-xl leading-relaxed text-justify leading-relaxed font-Kumbh"
+      />
+      <Paragraph
+        content="My goal is to keep improving my web development skills by exploring new technologies and working on innovative projects. I am also motivated by continuous learning and collaborating with other developers to create effective and elegant web solutions."
+        css="mt-8 text-xl leading-relaxed text-justify leading-relaxed font-Kumbh "
       />
     </div>
   );

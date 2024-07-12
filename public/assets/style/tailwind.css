@@ -72,6 +72,6 @@
     @apply bg-Charm;
   }
   .footer_item {
-    @apply mx-4 cursor-pointer font-Montserrat text-sm font-light tracking-widest;
+    @apply mx-4 cursor-pointer font-Montserrat font-light tracking-widest;
   }
 }

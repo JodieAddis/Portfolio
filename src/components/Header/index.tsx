@@ -6,7 +6,7 @@ const Component = () => {
   const isMobile = useScreenSize();
 
   return (
-    <div className="w-screen bg-BlueCharcoal py-5 ">
+    <div className="w-screen bg-BlueCharcoal lg:py-5 ">
       {isMobile ? (
         <div>
           <NavBarMobile />

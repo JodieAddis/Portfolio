@@ -128,7 +128,7 @@ const Component = () => {
         <div className="flex justify-center">
           <Button
             content={"send"}
-            css=" capitalize font-Kumbh py-2 px-4 border-Charm border-solid border-2 rounded-lg hover:bg-Charm hover:text-white hover:font-extrabold"
+            css="capitalize font-Montserrat py-2 px-4 border-Charm border-solid border-2 rounded-lg hover:bg-Charm hover:text-white hover:font-extrabold"
           />
         </div>
       </form>

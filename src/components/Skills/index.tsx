@@ -30,7 +30,7 @@ const Component = () => {
                 onClick={() => {
                   setShowSkills(true);
                 }}
-                css="my-10 capitalize font-Kumbh py-2 px-4 border-Bossanova border-solid border-2 rounded-lg hover:bg-white hover:text-Bossanova hover:font-extrabold"
+                css="my-10 capitalize font-Montserrat py-2 px-4 border-Bossanova border-solid border-2 rounded-lg hover:bg-Bossanova hover:text-white hover:font-extrabold"
               />
             )}
           </div>

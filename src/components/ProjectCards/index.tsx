@@ -1,5 +1,3 @@
-import Heading from "../../typographies/Heading";
-
 interface ProjectCardsProps {
   name: string;
   url: string;
@@ -17,7 +15,7 @@ const Component = ({
 }: ProjectCardsProps) => {
   return (
     <a
-      className="mb-4 w-[280px] lg:mx-6 lg:w-[330px] lg:transition lg:duration-100 lg:hover:rotate-6 lg:hover:scale-[115%]"
+      className=" mb-4 mt-8 w-[260px] lg:mx-6 lg:mt-0 lg:w-[330px] lg:transition lg:duration-100 lg:hover:rotate-6 lg:hover:scale-[115%]"
       href={url}
       target="_blank"
       key={index}
@@ -28,7 +26,7 @@ const Component = ({
           <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
           <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
         </div>
-        <div className="h-[180px] w-full overflow-hidden rounded-b-lg">
+        <div className="h-full w-full overflow-hidden rounded-b-lg lg:h-[180px]">
           <img
             src={imgPath}
             alt={imgAlt}
@@ -36,7 +34,6 @@ const Component = ({
           />
         </div>
       </div>
-      {/* <Heading kind={"h3"} content={name} css={"uppercase text-center mt-3"} /> */}
     </a>
   );
 };
