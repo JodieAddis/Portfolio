@@ -80,7 +80,10 @@ const Component = () => {
           css={"section_heading"}
           id={"contact"}
         />
-        <div className="section_design flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10">
+        <div
+          id="contact-section"
+          className="section_design relative flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10"
+        >
           <div className="mt-8 flex flex-col items-center lg:w-1/2">
             <Paragraph
               content="If you would like to discuss my background and/or my work expectations in web development in more detail, you can contact me via LinkedIn, by email, or by filling out the form next to this."
