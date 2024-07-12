@@ -5,6 +5,7 @@ import { formError } from "../../types/interface";
 import Modal from "../Modal";
 import Paragraph from "../../typographies/Paragraph";
 import { validateForm } from "../../utils/validateForm";
+import { createPortal } from "react-dom";
 
 const Component = () => {
   const [userName, setUserName] = useState<string>("");
@@ -78,15 +79,13 @@ const Component = () => {
   return (
     <div className="flex flex-col items-center justify-center lg:ml-8 lg:w-full lg:items-start ">
       {modalIsOpen ? (
-        ""
-      ) : (
         <Modal
-          text="message send"
-          btnContent="x"
-          onclick={() => {
-            setModalIsOpen(false);
-          }}
+          text="Your message has been successfully sent"
+          btnContent="close"
+          onclose={() => setModalIsOpen(false)}
         />
+      ) : (
+        ""
       )}
       <form className="mt-6 flex w-5/6 flex-col" onSubmit={handleSubmit}>
         <input

@@ -81,8 +81,8 @@ const Component = () => {
           id={"contact"}
         />
         <div
-          className="section_design relative flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10"
           id="contact-section"
+          className="section_design relative flex flex-col border-Charm lg:flex-row lg:justify-around lg:py-10"
         >
           <div className="mt-8 flex flex-col items-center lg:w-1/2">
             <Paragraph
