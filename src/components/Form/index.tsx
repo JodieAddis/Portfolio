@@ -5,7 +5,6 @@ import { formError } from "../../types/interface";
 import Modal from "../Modal";
 import Paragraph from "../../typographies/Paragraph";
 import { validateForm } from "../../utils/validateForm";
-import { createPortal } from "react-dom";
 
 const Component = () => {
   const [userName, setUserName] = useState<string>("");
@@ -42,7 +41,6 @@ const Component = () => {
 
     if (!isValidate.isValid) {
       alert("error");
-      // remplacer par une belle popup
       return;
     }
 
@@ -74,10 +72,8 @@ const Component = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center lg:ml-8 lg:w-full lg:items-start ">
-      {modalIsOpen ? (
-        ""
-      ) : (
+    <div className="relative flex flex-col items-center justify-center overflow-hidden lg:ml-8 lg:w-full lg:items-start ">
+      {modalIsOpen && (
         <Modal
           text="Your message has been successfully sent !"
           onclose={() => setModalIsOpen(false)}
@@ -132,7 +128,7 @@ const Component = () => {
         <div className="flex justify-center">
           <Button
             content={"send"}
-            css=" capitalize font-Kumbh py-2 px-4 border-Charm border-solid border-2 rounded-lg hover:bg-white hover:text-Charm hover:font-extrabold"
+            css=" capitalize font-Kumbh py-2 px-4 border-Charm border-solid border-2 rounded-lg hover:bg-Charm hover:text-white hover:font-extrabold"
           />
         </div>
       </form>
