@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectCards from "../../ProjectCards";
 import { projectData } from "../../../data/projectStack";
 import useScreenSize from "../../../hook/useScreenSize";
@@ -7,10 +7,10 @@ import Heading from "../../../typographies/Heading";
 
 const Component = () => {
   const isMobile = useScreenSize();
-  const [visibleProjects, setVisibleProjects] = useState(4);
+  const [visibleProjects, setVisibleProjects] = useState(3);
 
   const handleLoadMore = () => {
-    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 4);
+    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
   };
 
   return (

@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+![Bannière du portfolio](public/assets//images/portfolio.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌠 Introduction
 
-Currently, two official plugins are available:
+Hello ! I welcome you to my portfolio 🪐
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Since a young age, my curiosity has driven me to understand my environment and how things work. This led me to pursue scientific studies and, a year ago, to a career change into web development. Passionate about coding and website creation, I have already gained initial professional experience and continue today to develop various projects to deepen my knowledge of web technologies.
 
-## Expanding the ESLint configuration
+To discover all my projects, I invite you to check out my portfolio and my github 😊
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies used
 
-- Configure the top-level `parserOptions` property like this:
+I have used several technologies for my projects, including:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<img src="https://skillicons.dev/icons?i=git,js,ts,react,tailwind,sass"/>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🌠 Network
+
+- [Portfolio]()
+- [LinkedIn](https://www.linkedin.com/in/jodieaddis/)

@@ -1,13 +1,13 @@
-import useScreenSize from "../../hook/useScreenSize";
-import Heading from "../../typographies/Heading";
-import Paragraph from "../../typographies/Paragraph";
 import Form from "../Form";
+import Heading from "../../typographies/Heading";
+import IconNetwork from "../../icons/IconNetwork";
+import Meteors from "../MagicUi/Meteors";
+import Paragraph from "../../typographies/Paragraph";
 import PresentationDesktop from "../Presentation/PresentationDesktop";
 import PresentationMobile from "../Presentation/PresentationMobile";
-import Skills from "../Skills";
-import IconNetwork from "../../icons/IconNetwork";
 import SectionProjects from "../Section/SectionProjects";
-import Meteors from "../MagicUi/Meteors";
+import Skills from "../Skills";
+import useScreenSize from "../../hook/useScreenSize";
 
 const Component = () => {
   const isMobile = useScreenSize();

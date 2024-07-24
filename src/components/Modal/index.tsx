@@ -14,7 +14,6 @@ interface ModalProps {
 const Component = ({ text, onclose }: ModalProps) => {
   const [idElement, setIdElement] = useState<HTMLElement | null>(null);
 
-  //Vérification que l'élément DOM avec l'id "contact-section" est rendu avant que la modale ne soit montré:
   useEffect(() => {
     const element = document.getElementById("contact-section");
     if (element) {
