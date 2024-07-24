@@ -8,9 +8,15 @@ To discover all my projects, I invite you to check out my portfolio and my githu
 
 ## 🌠 Technologies used
 
-I have used several technologies for my projects, including:
+To build my portfolio, I used the following tools:
 
-<img src="https://skillicons.dev/icons?i=git,js,ts,react,tailwind,sass"/>
+- **Semantic HTML5 markup**
+- **Mobile-first workflow**
+- **TypeScript** | v. 5.2.2
+- **ReactJs** | v. 18.2
+- **Tailwind** | v. 3.4.4
+- **EmailJS** | v. 4.3.3
+- **MagicUI**
 
 ## 🌠 Networks
 
