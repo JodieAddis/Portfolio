@@ -8,7 +8,6 @@ export const projectData: ProjectStackItem[] = [
   {
     name: "dev jobs",
     url: "#",
-    // img: "../../public/assets/images/in-progress.webp",
     img: "/public/assets/images/in-progress.webp",
   },
   {
