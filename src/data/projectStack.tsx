@@ -28,7 +28,7 @@ export const projectData: ProjectStackItem[] = [
   {
     name: "crowFunding product page",
     url: "https://jodieaddis.github.io/crowdfunding_product_page/",
-    img: "/public/assets/images/crowdfunding_product_page.webp",
+    img: "../../public/assets/images/crowdfunding_product_page.webp",
   },
   {
     name: "password generator",
