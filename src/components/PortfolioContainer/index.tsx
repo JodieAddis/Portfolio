@@ -7,7 +7,6 @@ import PresentationDesktop from "../Presentation/PresentationDesktop";
 import PresentationMobile from "../Presentation/PresentationMobile";
 import SectionProjects from "../Section/SectionProjects";
 import Skills from "../Skills";
-import useScreenSize from "../../hook/useScreenSize";
 
 const Component = () => {
   const isMobile = useScreenSize();
