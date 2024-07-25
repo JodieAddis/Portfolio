@@ -20,6 +20,6 @@ To build my portfolio, I used the following tools:
 
 ## 🌠 Networks
 
-- [Portfolio]()
+- [Portfolio](https://portfolio-1lncgioed-jodieaddis-projects.vercel.app/)
 - [LinkedIn](https://www.linkedin.com/in/jodieaddis/)
 - [CodeWars](https://www.codewars.com/users/JodieAddis)
