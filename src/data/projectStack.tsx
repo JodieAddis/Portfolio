@@ -13,8 +13,8 @@ export const projectData: ProjectStackItem[] = [
   {
     name: "planets fact site",
     url: "https://planets-fact-site-rosy-delta.vercel.app/",
-    // img: "../../public/assets/images/planets-fact-site.webp",
-    img: "/public/assets/images/planets-fact-site.webp",
+
+    img: "../../public/assets/images/planets-fact-site.webp",
   },
   {
     name: "e-commerce sneakers",
