@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useScreenSize = () => {
+const useScreenSize = () => {
   const [isCurrentSize, setIsCurrentSize] = useState<boolean>(
     window.innerWidth < 1024 ? true : false,
   );
@@ -17,3 +17,5 @@ export const useScreenSize = () => {
   }, []);
   return isCurrentSize;
 };
+
+export default useScreenSize;
