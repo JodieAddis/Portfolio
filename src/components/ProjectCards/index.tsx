@@ -7,7 +7,6 @@ interface ProjectCardsProps {
 }
 
 const Component = ({
-  name,
   url,
   imgPath,
   imgAlt,

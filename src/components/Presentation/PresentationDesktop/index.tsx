@@ -15,8 +15,10 @@ const Component = () => {
           content={
             <div className="relative flex flex-col overflow-hidden">
               <span>
-                Hi, My name is Jodie. I'm a React Developer and I'm{" "}
-                <div className="absolute -bottom-2 left-28 z-10 flex justify-center self-center capitalize">
+                <p className="text-center">
+                  Hi, My name is Jodie. I'm a React Developer and I'm
+                </p>
+                <div className="flex justify-center self-center capitalize">
                   <WordRotate
                     words={[
                       "Sci-Fi film aficionado",
@@ -30,7 +32,7 @@ const Component = () => {
               </span>
             </div>
           }
-          css="text-3xl ml-16 leading-relaxed text-justify font-Kumbh flex flex-row"
+          css="text-4xl ml-16 leading-relaxed text-justify font-Kumbh flex flex-row"
         />
       </div>
       <div className="mt-16 flex flex-col items-center justify-center lg:flex-row">
