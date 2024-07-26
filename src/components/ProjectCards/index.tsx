@@ -6,12 +6,7 @@ interface ProjectCardsProps {
   index: number;
 }
 
-const Component = ({
-  url,
-  imgPath,
-  imgAlt,
-  index,
-}: ProjectCardsProps) => {
+const Component = ({ url, imgPath, imgAlt, index }: ProjectCardsProps) => {
   return (
     <a
       className=" mb-4 mt-8 w-[260px] lg:mx-6 lg:mt-0 lg:w-[330px] lg:transition lg:duration-100 lg:hover:rotate-6 lg:hover:scale-[115%]"
@@ -25,7 +20,7 @@ const Component = ({
           <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
           <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
         </div>
-        <div className="h-full w-full overflow-hidden rounded-b-lg lg:h-[180px]">
+        <div className="h-[150px] w-full overflow-hidden rounded-b-lg lg:h-[180px]">
           <img
             src={imgPath}
             alt={imgAlt}

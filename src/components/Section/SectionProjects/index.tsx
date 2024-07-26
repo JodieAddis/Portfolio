@@ -18,14 +18,21 @@ const Component = () => {
       {isMobile ? (
         <>
           {projectData.slice(0, visibleProjects).map((project, index) => (
-            <ProjectCards
-              key={index}
-              name={project.name}
-              url={project.url}
-              imgPath={project.img}
-              imgAlt={`Home page picture of the application "${project.name}"`}
-              index={index}
-            />
+            <>
+              <ProjectCards
+                key={index}
+                name={project.name}
+                url={project.url}
+                imgPath={project.img}
+                imgAlt={`Home page picture of the application "${project.name}"`}
+                index={index}
+              />
+              <Heading
+                kind={"h3"}
+                content={project.name}
+                css={"uppercase text-center text-xl"}
+              />
+            </>
           ))}
           {visibleProjects < projectData.length && (
             <Button
