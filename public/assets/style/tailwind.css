@@ -4,11 +4,13 @@
 
 @font-face {
   font-family: Montserrat;
+  font-display: swap;
   src: url("../font/Montserrat-Regular.ttf");
 }
 
 @font-face {
   font-family: Kumbh;
+  font-display: swap;
   src: url("../font/KumbhSans-Regular.ttf");
 }
 

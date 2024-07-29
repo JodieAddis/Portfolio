@@ -22,6 +22,7 @@ const Component = ({ url, imgPath, imgAlt, index }: ProjectCardsProps) => {
         </div>
         <div className="h-[150px] w-full overflow-hidden rounded-b-lg lg:h-[180px]">
           <img
+            loading="lazy"
             src={imgPath}
             alt={imgAlt}
             className="rounded-b-lg object-cover"
