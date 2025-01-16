@@ -3,7 +3,6 @@ import ProjectCards from "../../ProjectCards";
 import { projectData } from "../../../data/projectStack";
 import useScreenSize from "../../../hook/useScreenSize";
 import Button from "../../Button";
-import Heading from "../../../typographies/Heading";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -23,14 +22,11 @@ const Component = () => {
                 key={index}
                 name={project.name}
                 url={project.url}
+                github={project.github}
                 imgPath={project.img}
                 imgAlt={`Home page picture of the application "${project.name}"`}
                 index={index}
-              />
-              <Heading
-                kind={"h3"}
-                content={project.name}
-                css={"uppercase text-center text-xl"}
+                stack={project.stacks}
               />
             </>
           ))}
@@ -50,14 +46,11 @@ const Component = () => {
                 key={index}
                 name={project.name}
                 url={project.url}
+                github={project.github}
                 imgPath={project.img}
                 imgAlt={`Home page picture of the application "${project.name}"`}
                 index={index}
-              />
-              <Heading
-                kind={"h3"}
-                content={project.name}
-                css={"uppercase text-center"}
+                stack={project.stacks}
               />
             </div>
           ))}

@@ -70,6 +70,9 @@
   .projects {
     @apply bg-VinRouge;
   }
+  .project-stack {
+    @apply mt-3 rounded-xl bg-white bg-opacity-80 px-3 font-Montserrat text-base font-extrabold capitalize text-Downriver lg:mt-0 lg:text-sm;
+  }
   .contact {
     @apply bg-Charm;
   }
