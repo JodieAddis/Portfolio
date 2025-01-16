@@ -1,35 +1,59 @@
+import IconWeb from "../../icons/IconWeb";
+
 interface ProjectCardsProps {
   name: string;
   url: string;
+  github: string;
   imgPath: string;
   imgAlt: string;
   index: number;
+  stack: string[];
 }
 
-const Component = ({ url, imgPath, imgAlt, index }: ProjectCardsProps) => {
+const Component = ({
+  name,
+  url,
+  github,
+  imgPath,
+  imgAlt,
+  index,
+  stack,
+}: ProjectCardsProps) => {
   return (
-    <a
-      className=" mb-4 mt-8 w-[260px] lg:mx-6 lg:mt-0 lg:w-[330px] lg:transition lg:duration-100 lg:hover:rotate-6 lg:hover:scale-[115%]"
-      href={url}
-      target="_blank"
-      key={index}
-    >
-      <div className=" w-full rounded-lg border-[1px] border-solid border-white ">
-        <div className="flex w-full flex-row border-b-[1px] border-white bg-VinRouge bg-opacity-30">
-          <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
-          <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
-          <span className="mx-2 my-2 h-3 w-3 rounded-full bg-white"></span>
-        </div>
-        <div className="h-[150px] w-full overflow-hidden rounded-b-lg lg:h-[180px]">
+    <>
+      <div className="mb-4 mt-8 w-[260px] rounded-lg border-[1px] border-solid border-white bg-VinRouge bg-opacity-30 p-4 lg:mx-6 lg:mt-0 lg:w-[370px]">
+        <div className="h-[130px] w-full overflow-hidden rounded-lg border-[1px] border-solid border-white lg:h-[180px]">
           <img
             loading="lazy"
             src={imgPath}
             alt={imgAlt}
-            className="rounded-b-lg object-cover"
+            className="rounded-lg object-cover"
           />
         </div>
+        <div>
+          <div className="mt-4 flex flex-row justify-between">
+            <div className="w-32 font-Kumbh text-lg font-bold uppercase lg:w-full">
+              {name}
+            </div>
+            <div className="flex flex-row">
+              <a href={url} target="_blank" key={index} className="mr-3">
+                <IconWeb icon="web" />
+              </a>
+              <a href={github} target="_blank" key={index}>
+                <IconWeb icon="github" />
+              </a>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-row flex-wrap items-center justify-around overflow-hidden lg:justify-evenly">
+            {stack.map((tech, idx) => (
+              <span key={idx} className="project-stack">
+                #{tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
-    </a>
+    </>
   );
 };
 

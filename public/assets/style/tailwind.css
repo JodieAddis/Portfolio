@@ -4,12 +4,14 @@
 
 @font-face {
   font-family: Montserrat;
+  font-display: swap;
   font-display: "swap";
   src: url("../font/Montserrat-Regular.ttf");
 }
 
 @font-face {
   font-family: Kumbh;
+  font-display: swap;
   font-display: "swap";
   src: url("../font/KumbhSans-Regular.ttf");
 }
@@ -69,6 +71,9 @@
   }
   .projects {
     @apply bg-VinRouge;
+  }
+  .project-stack {
+    @apply mt-3 rounded-xl bg-white bg-opacity-80 px-3 font-Montserrat text-base font-extrabold capitalize text-Downriver lg:mt-0 lg:text-sm;
   }
   .contact {
     @apply bg-Charm;

@@ -1,6 +1,7 @@
 import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => {
+  const date = new Date().getFullYear();
   return (
     <nav className="mt-20 flex flex-col justify-center bg-BlueCharcoal py-5 lg:flex-row">
       <div className="mb-3 text-sm lg:mb-0">
@@ -27,7 +28,7 @@ const Component = () => {
         css="text-xl flex justify-center item-center text-center mb-3 lg:mb-0"
       />
       <Paragraph
-        content="©2024 Jodie Addis"
+        content={`©${date} Jodie Addis`}
         css="footer_item text-xs lg:text-sm"
       />
     </nav>
