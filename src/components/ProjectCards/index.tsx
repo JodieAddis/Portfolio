@@ -21,8 +21,8 @@ const Component = ({
 }: ProjectCardsProps) => {
   return (
     <>
-      <div className="mb-4 mt-8 w-[260px] rounded-lg border-[1px] border-solid border-white bg-VinRouge bg-opacity-30 p-4 lg:mx-6 lg:mt-0 lg:w-[370px]">
-        <div className="h-[130px] w-full overflow-hidden rounded-lg border-[1px] border-solid border-white lg:h-[180px]">
+      <div className="mb-8 mt-8 w-[260px] rounded-lg border border-white bg-VinRouge bg-opacity-30 px-4 pt-4 lg:mt-0 lg:w-[300px]">
+        <div className="h-[130px] w-full overflow-hidden rounded-lg border-[1px] border-solid border-white lg:h-[150px]">
           <img
             loading="lazy"
             src={imgPath}
@@ -31,7 +31,7 @@ const Component = ({
           />
         </div>
         <div>
-          <div className="mt-4 flex flex-row justify-between">
+          <div className="mt-4 flex h-[50px] flex-row justify-between">
             <div className="w-32 font-Kumbh text-lg font-bold uppercase lg:w-full">
               {name}
             </div>
@@ -44,7 +44,7 @@ const Component = ({
               </a>
             </div>
           </div>
-          <div className="mt-8 flex flex-row flex-wrap items-center justify-around overflow-hidden lg:justify-evenly">
+          <div className="my-8 flex flex-row flex-wrap items-center justify-around overflow-hidden lg:my-5 lg:justify-evenly">
             {stack.map((tech, idx) => (
               <span key={idx} className="project-stack">
                 #{tech}
